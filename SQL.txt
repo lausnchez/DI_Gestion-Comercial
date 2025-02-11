@@ -1,0 +1,71 @@
+CREAR TABLAS
+----------------------------------------------------------
+create table Cliente(
+	Cod_Cli INT NOT NULL auto_increment,
+	Nombre varchar(20) NOT NULL,
+	Apellidos varchar(50) NOT NULL,
+	Telefono varchar(9) NOT NULL,
+	Direccion varchar(50),
+	Fecha_Alta DATE,
+	PRIMARY KEY(Cod_Cli)
+);
+
+create table Proveedor(
+	Cod_Prov INT NOT NULL auto_increment,
+	Nombre varchar(50) NOT NULL,
+	Contacto varchar(75) NOT NULL,
+	Telefono varchar(9) NOT NULL,
+	Direccion varchar(50),
+	PRIMARY KEY(Cod_Prov)
+);
+
+create table Autores(
+	Cod_Aut INT NOT NULL auto_increment,
+	Nombre varchar(50) NOT NULL,
+	PRIMARY KEY(Cod_Aut)
+);
+
+create table Generos(
+	Cod_Gen INT NOT NULL auto_increment PRIMARY KEY,
+	Nombre varchar(20)
+);
+
+create table Producto(
+	Cod_Pro INT NOT NULL auto_increment,
+	Nombre varchar(50) NOT NULL,
+	Descripcion varchar(200),
+	Precio decimal(4,2) NOT NULL,
+	Stock int NOT NULL,
+	Foto varchar(300),
+	Cod_Prod int,
+	Cod_Aut int,
+	Fecha DATE NOT NULL,
+	Formato varchar(20),
+	Cod_Gen int,
+	FOREIGN KEY(Cod_Prod) REFERENCES Proveedor(Cod_Prov),
+	FOREIGN KEY(Cod_Aut) REFERENCES Autores(Cod_Aut),
+	FOREIGN KEY(Cod_Gen) REFERENCES Generos(Cod_Gen),
+	PRIMARY KEY(Cod_Pro)
+);
+
+create table Factura(
+	Num_Fac int NOT NULL auto_increment,
+	Fecha DATE NOT NULL,
+	Cod_Cli int NOT NULL,
+	Importe decimal(5,2) NOT NULL,
+	Iva decimal(3,2) NOT NULL,
+	Descuento decimal(3,2),
+	PRIMARY KEY(Num_Fac),
+	FOREIGN KEY(Cod_Cli) REFERENCES Cliente(Cod_Cli)
+);
+
+create table Detalle(
+	Num_Fac int NOT NULL,
+	Linea int NOT NULL,
+	Cod_Pro int NOT NULL,
+	Unidades int NOT NULL,
+	Precio decimal(5,2) NOT NULL,
+	FOREIGN KEY(Num_Fac) REFERENCES Factura(Num_Fac),
+	FOREIGN KEY(Cod_Pro) REFERENCES Producto(Cod_Pro),
+	PRIMARY KEY(Num_Fac, Linea)
+);
