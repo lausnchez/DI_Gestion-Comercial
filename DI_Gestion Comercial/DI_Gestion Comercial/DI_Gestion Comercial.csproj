@@ -55,17 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="vista\Login.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="vista\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="vista\pantallas\PantallaPrincipal.xaml.cs">
+      <DependentUpon>PantallaPrincipal.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="modelo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\imagenes\vinyl_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="vista\pantallas\PantallaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\pantallas\MD73-Sweetart-01-Translucent.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

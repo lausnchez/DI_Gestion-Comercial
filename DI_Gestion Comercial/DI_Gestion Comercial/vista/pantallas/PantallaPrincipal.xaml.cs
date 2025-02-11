@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DI_Gestion_Comercial
+namespace DI_Gestion_Comercial.vista.pantallas
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para PantallaPrincipal.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PantallaPrincipal : Window
     {
-        public MainWindow()
+        public PantallaPrincipal()
         {
             InitializeComponent();
         }

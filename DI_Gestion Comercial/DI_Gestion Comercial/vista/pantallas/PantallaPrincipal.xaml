@@ -1,0 +1,13 @@
+﻿<Window x:Class="DI_Gestion_Comercial.vista.pantallas.PantallaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
+        mc:Ignorable="d"
+        Title="PantallaPrincipal" Height="1000" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="1281" Margin="-636,0,0,0" VerticalAlignment="Center" Width="1278" Source="/vista/pantallas/MD73-Sweetart-01-Translucent.jpg"/>
+
+    </Grid>
+</Window>

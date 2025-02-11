@@ -15,9 +15,9 @@ Posteriormente se agregaron las tablas:
 
 Y a la tabla producto se le agregaron los campos "Fecha", "Formato", "Autor" y "Género", que referencian a las tablas extras que hemos hecho para tener un listado más claro del stock de la tienda.
 
-Se ha creado un archivo .sql para poder importar la estructura de la base de datos en un ordenador externo.
+Se ha creado un archivo .sql para poder importar la estructura de la base de datos en un ordenador externo, además de los archivos con los datos de cada tabla para tener una base sobre la que poder trabajar. Todos los datos de éstas tablas están generados por ChatGPT.
 
-### Consideraciones de la base de datos
 >[!CAUTION]
->Para poder generar un producto es importante crear primero el autor, proveedor y género en la base de datos. 
+>Para poder generar un producto es ***importante crear primero el autor, proveedor y género*** en la base de datos. 
 
+Se contempla a futuro de realizar una opción de login si el tiempo de entrega lo permite.
