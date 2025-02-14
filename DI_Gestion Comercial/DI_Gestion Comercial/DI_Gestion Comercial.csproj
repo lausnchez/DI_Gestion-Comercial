@@ -102,7 +102,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="vista\pantallas\MD73-Sweetart-01-Translucent.jpg" />
+    <Resource Include="vista\imagenes\MD73-Sweetart-01-Translucent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\pantallas\vinyl_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\imagenes\shopping-cart-white-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

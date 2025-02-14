@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vista/pantallas/md73-sweetart-01-translucent.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vista/pantallas/vinyl_background.jpg")]
 
 
