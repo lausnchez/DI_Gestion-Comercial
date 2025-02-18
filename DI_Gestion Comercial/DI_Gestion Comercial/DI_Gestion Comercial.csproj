@@ -110,5 +110,8 @@
   <ItemGroup>
     <Resource Include="vista\imagenes\shopping-cart-white-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\imagenes\search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
