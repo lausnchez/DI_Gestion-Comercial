@@ -1,0 +1,35 @@
+INSERT INTO producto (Nombre, Descripcion, Precio, Stock, Foto, Cod_Prov, Cod_Aut, Fecha, Formato, Cod_Gen)
+ VALUES (
+    "Short n' Sweet",
+    "El último disco de Sabrina Carpenter",
+    30.99,
+    69,
+    "ruta/de/la/imagen.jpg",
+    5,
+    91,
+    2025-02-21,
+    "2LP",
+    1
+);
+
+
+ SELECT producto.Cod_Pro,
+ producto.Nombre,
+ producto.Descripcion,
+ producto.Precio,
+ producto.Stock,
+ producto.Foto,
+ proveedor.Nombre,
+ autores.Nombre,
+ producto.Fecha,
+ producto.Formato,
+ generos.Nombre,
+producto.Cod_Prov,
+producto.Cod_Aut,
+producto_Cod_Gen
+FROM producto, autores, generos, proveedor 
+WHERE producto.Cod_Aut=autores.Cod_Aut 
+AND producto.Cod_Prov=proveedor.Cod_Prov 
+AND producto.Cod_Gen=generos.Cod_Gen
+
+update producto set Foto="/vista/imagenes/sabrina-carpenter-short-n-sweet-deluxe.jpg" where Cod_Pro=1

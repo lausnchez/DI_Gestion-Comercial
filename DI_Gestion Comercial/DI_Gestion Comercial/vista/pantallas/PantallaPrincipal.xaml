@@ -25,7 +25,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        
+
         <Style x:Key="BotonCompra" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="#5926d1"/>
@@ -83,7 +83,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
-        
+
         <Style x:Key="ButtonOpcionesProducto" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
             <Setter Property="Background" Value="#FFA6D218"/>
@@ -142,7 +142,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background2" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border2" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground2" Color="#FF838383"/>
-        
+
         <Style x:Key="ButtonCarritoCompra" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual2}"/>
             <Setter Property="Background" Value="#5926d1"/>
@@ -236,16 +236,20 @@
                 </Setter.Value>
             </Setter>
         </Style>
-       
+
     </Window.Resources>
     <Grid>
-        <Image HorizontalAlignment="Left" Height="1052" VerticalAlignment="Center" Width="1048" Source="/vista/imagenes/MD73-Sweetart-01-Translucent.jpg" Margin="-520,0,0,0"/>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="99*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="1052" VerticalAlignment="Top" Width="1048" Source="/vista/imagenes/MD73-Sweetart-01-Translucent.jpg" Margin="-520,-34,0,0" Grid.RowSpan="2"/>
+
         <!-- Listado -->
         <ListBox 
             x:Name="listadoProductos_principal" 
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Width="1000" Height="700" Margin="549,238,51,46" BorderThickness="0">
+            Width="1000" Height="700" Margin="549,238,51,46" BorderThickness="0" Grid.RowSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -267,7 +271,8 @@
 
 
                             <Image Grid.Column="0"
-                               Source="/vista/imagenes/vinyl_background.jpg" 
+                               Source="{Binding Foto}" 
+                               Stretch="UniformToFill"
                                Width="180" 
                                Height="180"
                                Margin="10"></Image>
@@ -275,7 +280,7 @@
                                 <TextBlock
                                     x:Name="txt_nombreProducto"
                                     Grid.Column="1"
-                                    Text="Nombre del Producto"
+                                    Text="{Binding Nombre}"
                                     Margin="20"
                                     Height="30"
                                     FontSize="24" 
@@ -284,14 +289,14 @@
                                     />
                                 <TextBlock
                                     x:Name="txt_autorProducto"
-                                    Text="Autor"
+                                    Text="{Binding Nombre_Autor}"
                                     Margin="20,0,0,0"
                                     FontSize="18"
                                     FontFamily="Segoe UI Semibold"
                                     />
                                 <TextBlock
                                     x:Name="txt_fechaProducto"
-                                    Text="Fecha"
+                                    Text="{Binding Fecha, StringFormat=d}"
                                     Margin="20,5,0,0"
                                     FontSize="18"
                                     FontFamily="Segoe UI Light" 
@@ -299,7 +304,7 @@
                                     />
                                 <TextBlock
                                     x:Name="txt_formatoProducto"
-                                    Text="Formato"
+                                    Text="{Binding Formato}"
                                     Margin="20,5,0,0"
                                     FontSize="18"
                                     FontFamily="Segoe UI Light"
@@ -312,7 +317,7 @@
                                                 Height="20"
                                                 Margin="0,0,10,0"
                                                 Source="/vista/imagenes/shopping-cart-white-icon.png"/>
-                                                                    <TextBox
+                                            <TextBox
                                                 Background="Transparent"
                                                 BorderThickness="0"
                                                 Height="20"
@@ -328,10 +333,13 @@
                             <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
                                 <TextBox 
                                     HorizontalAlignment="Center"
+                                    Text="{Binding Precio}"
                                     Foreground="Crimson"
+                                    Background="Transparent"
+                                    BorderThickness="0"
                                     FontSize="24"
                                     FontFamily="Segoe UI Semibold"
-                                    Margin="0,0,0,10">Precio</TextBox>
+                                    Margin="0,0,0,10"/>
                                 <Button  Style="{DynamicResource ButtonOpcionesProducto}"
                                      x:Name="btn_editarProducto">Editar Producto</Button>
                                 <Button Style="{DynamicResource ButtonOpcionesProducto}" 
@@ -343,18 +351,18 @@
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            
+
         </ListBox>
-        
+
         <!--- Botón de carrito de la compra -->
         <Button  x:Name="btn_carritoCompra" Style="{DynamicResource ButtonCarritoCompra}" HorizontalAlignment="Left" Margin="1489,58,0,0" VerticalAlignment="Top" Height="60" Width="60">
             <Image Source="/vista/imagenes/shopping-cart-white-icon.png" Width="25" />
         </Button>
-        
+
         <!--- Botones de selección de listas -->
         <Button Style="{DynamicResource btn_selectorLista}" Content="Productos" HorizontalAlignment="Left" Margin="549,90,0,0" VerticalAlignment="Top" Height="46" Width="138"/>
 
-        <Border CornerRadius="25" BorderThickness="2" BorderBrush="#5926d1" Height="50" Width="700" Margin="549,152,351,757">
+        <Border CornerRadius="25" BorderThickness="2" BorderBrush="#5926d1" Height="50" Width="700" Margin="549,165,351,175">
             <StackPanel Orientation="Horizontal">
                 <TextBlock 
                     Margin="25,0,25,0"
@@ -364,17 +372,17 @@
                     >
                     Patata
                 </TextBlock>
-                
+
                 <!--Botón de buscar-->
                 <Border CornerRadius="25" Background="#5926d1" Height="40" Width="40" Padding="0">
                     <Button Width="40" Height="40" Background="Transparent" BorderThickness="0">
                         <Image Source="/vista/imagenes/search.png" Height="20"/>
                     </Button>
                 </Border>
-                
+
             </StackPanel>
         </Border>
-        
-        
+
+
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DI_Gestion_Comercial.controlador;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace DI_Gestion_Comercial.vista.pantallas
         public PantallaPrincipal()
         {
             InitializeComponent();
+            ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
         }
     }
 }
