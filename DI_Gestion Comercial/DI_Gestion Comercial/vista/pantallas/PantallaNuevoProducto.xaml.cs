@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DI_Gestion_Comercial.controlador;
+using DI_Gestion_Comercial.modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +22,12 @@ namespace DI_Gestion_Comercial.vista.pantallas
     public partial class PantallaNuevoProducto : Window
     {
         public PantallaNuevoProducto()
-        {
+        {    
             InitializeComponent();
+            ControladorAgregarProductos cAgregarProductos = new ControladorAgregarProductos();
+            cAgregarProductos.establecerNombresProveedores(cb_proveedorAgregarProducto);
+            cAgregarProductos.establecerNombresAutores(cb_autorAgregarProducto);
+            cAgregarProductos.establecerNombresGeneros(cb_generoAgregarProducto);
         }
     }
 }

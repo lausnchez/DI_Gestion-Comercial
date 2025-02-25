@@ -100,6 +100,7 @@ namespace DI_Gestion_Comercial.modelo
 
                     listado.Add(producto);
                 }
+                db.desconectarConexion();
                 return listado;
             }
             catch (Exception ex)

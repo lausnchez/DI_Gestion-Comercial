@@ -51,13 +51,15 @@
         <DatePicker x:Name="date_agregarProducto" HorizontalAlignment="Left" Margin="318,293,0,0" VerticalAlignment="Top" Width="223"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Autor" HorizontalAlignment="Left" Margin="59,136,0,0" VerticalAlignment="Top" Width="226"/>
-        <ComboBox x:Name="cb_autorAgregarProducto" HorizontalAlignment="Left" Margin="59,547,0,0" VerticalAlignment="Top" Width="226"/>
+        <ComboBox x:Name="cb_generoAgregarProducto" HorizontalAlignment="Left" Margin="59,547,0,0" VerticalAlignment="Top" Width="226"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Proveedor" HorizontalAlignment="Left" Margin="59,443,0,0" VerticalAlignment="Top" Width="226"/>
         <ComboBox x:Name="cb_proveedorAgregarProducto" HorizontalAlignment="Left" Margin="59,473,0,0" VerticalAlignment="Top" Width="226"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Género" HorizontalAlignment="Left" Margin="59,513,0,0" VerticalAlignment="Top" Width="226"/>
-        <ComboBox x:Name="cb_generoAgregarProducto" HorizontalAlignment="Left" Margin="59,170,0,0" VerticalAlignment="Top" Width="226"/>
+        <ComboBox x:Name="cb_autorAgregarProducto" 
+                  IsEditable="False"
+                  HorizontalAlignment="Left" Margin="59,170,0,0" VerticalAlignment="Top" Width="226"/>
         <Button x:Name="btn_agregarProducto" Content="Button" HorizontalAlignment="Center" Margin="0,615,0,0" VerticalAlignment="Top" Width="180"/>
 
 

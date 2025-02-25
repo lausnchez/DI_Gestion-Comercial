@@ -111,9 +111,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controlador\ControladorAgregarProductos.cs" />
     <Compile Include="controlador\ControladorPantallaPrincipal.cs" />
+    <Compile Include="modelo\Autor.cs" />
     <Compile Include="modelo\Database.cs" />
+    <Compile Include="modelo\Genero.cs" />
     <Compile Include="modelo\Producto.cs" />
+    <Compile Include="modelo\Proveedor.cs" />
     <Compile Include="vista\pantallas\PantallaNuevoProducto.xaml.cs">
       <DependentUpon>PantallaNuevoProducto.xaml</DependentUpon>
     </Compile>
