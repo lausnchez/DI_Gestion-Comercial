@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="1000" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="PantallaPrincipal" Height="1000" Width="1700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -198,6 +198,8 @@
         <SolidColorBrush x:Key="Button.Disabled.Background3" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border3" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground3" Color="#FF838383"/>
+        
+        <!--Estilo del selector de lista de productos-->
         <Style x:Key="btn_selectorLista" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual3}"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -236,6 +238,31 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="Menu.Static.Background" Color="#FFF0F0F0"/>
+        
+        <!--Style del menú principal-->
+        <Style x:Key="MenuStylePrincipal" TargetType="{x:Type Menu}">
+            <Setter Property="Background" Value="#5926d1"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="FontSize" Value="{DynamicResource {x:Static SystemFonts.MenuFontSizeKey}}"/>
+            <Setter Property="FontStyle" Value="{DynamicResource {x:Static SystemFonts.MenuFontStyleKey}}"/>
+            <Setter Property="FontWeight" Value="{DynamicResource {x:Static SystemFonts.MenuFontWeightKey}}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Menu}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </Window.Resources>
     <Grid>
@@ -243,13 +270,13 @@
             <RowDefinition Height="65*"/>
             <RowDefinition Height="99*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Height="1052" VerticalAlignment="Top" Width="1048" Source="/vista/imagenes/MD73-Sweetart-01-Translucent.jpg" Margin="-520,-34,0,0" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="1244" VerticalAlignment="Top" Width="1261" Source="/vista/imagenes/MD73-Sweetart-01-Translucent.jpg" Margin="-596,-130,0,0" Grid.RowSpan="2"/>
 
         <!-- Listado -->
         <ListBox 
             x:Name="listadoProductos_principal" 
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Width="1000" Height="700" Margin="549,238,51,46" BorderThickness="0" Grid.RowSpan="2">
+            Width="1100" Height="700" Margin="549,238,51,46" BorderThickness="0" Grid.RowSpan="2" Background="Transparent">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -261,7 +288,7 @@
                         <Grid Grid.Row="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="200"></ColumnDefinition>
-                                <ColumnDefinition Width="550"></ColumnDefinition>
+                                <ColumnDefinition Width="600"></ColumnDefinition>
                                 <ColumnDefinition Width="240"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -382,6 +409,10 @@
 
             </StackPanel>
         </Border>
+        
+        <Menu Style="{DynamicResource MenuStylePrincipal}">
+            <MenuItem Header="Agregar Producto" Foreground="White" Height="30" Padding="10,0,10,0" Click="MenuItem_Click"></MenuItem>
+        </Menu>
 
 
     </Grid>

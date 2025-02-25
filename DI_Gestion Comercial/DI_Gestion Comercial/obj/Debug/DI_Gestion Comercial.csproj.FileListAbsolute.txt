@@ -46,3 +46,5 @@ C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gest
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gesti.88B3A2D9.Up2Date
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.g.cs
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.baml

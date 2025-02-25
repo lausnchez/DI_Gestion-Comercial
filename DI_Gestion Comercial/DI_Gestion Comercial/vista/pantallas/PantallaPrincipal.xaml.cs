@@ -25,5 +25,11 @@ namespace DI_Gestion_Comercial.vista.pantallas
             InitializeComponent();
             ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            PantallaNuevoProducto nuevoProducto = new PantallaNuevoProducto();
+            nuevoProducto.ShowDialog();
+        }
     }
 }

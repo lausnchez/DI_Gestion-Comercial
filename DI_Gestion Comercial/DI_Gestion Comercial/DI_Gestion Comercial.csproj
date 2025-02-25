@@ -114,6 +114,9 @@
     <Compile Include="controlador\ControladorPantallaPrincipal.cs" />
     <Compile Include="modelo\Database.cs" />
     <Compile Include="modelo\Producto.cs" />
+    <Compile Include="vista\pantallas\PantallaNuevoProducto.xaml.cs">
+      <DependentUpon>PantallaNuevoProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\pantallas\PantallaPrincipal.xaml.cs">
       <DependentUpon>PantallaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
     <Resource Include="vista\imagenes\vinyl_background.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="vista\pantallas\PantallaNuevoProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\pantallas\PantallaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="vista\imagenes\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\pantallas\VinylMePlease.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
