@@ -32,5 +32,24 @@ namespace DI_Gestion_Comercial.controlador
             cBox.ItemsSource = list;
         }
 
+        public Producto crearProducto(TextBox nombre, TextBox precio, TextBox Stock, TextBox Formato, ComboBox autor, ComboBox proveedor, ComboBox genero, Image imagen, DatePicker fecha)
+        {
+            // Comprobar los datos
+            Boolean valoresValidos = true;
+            string error = "";
+
+            if (!Utils.comprobarFloat(precio.Text))
+            {
+                error += "Valor en el campo Precio no válido\n";
+                valoresValidos = false;
+            }
+            else if (!Utils.comprobarInt(Stock.Text))
+            {
+                error += "Valor en el campo Stock no válido\n";
+                valoresValidos = false;
+            }
+            return null;
+        }
+
     }
 }

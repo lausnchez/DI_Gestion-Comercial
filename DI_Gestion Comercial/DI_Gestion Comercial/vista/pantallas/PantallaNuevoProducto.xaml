@@ -30,6 +30,63 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        
+        <!--Style boton-->
+        <Style x:Key="ButtonAgregarProducto" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="#5926d1"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#8552ff"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="Foreground" Value="#5926d1"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Label Style="{DynamicResource labelStyleBasico}" Content="Nombre" HorizontalAlignment="Left" Margin="59,73,0,0" VerticalAlignment="Top" Width="226"/>
@@ -60,11 +117,11 @@
         <ComboBox x:Name="cb_autorAgregarProducto" 
                   IsEditable="False"
                   HorizontalAlignment="Left" Margin="59,170,0,0" VerticalAlignment="Top" Width="226"/>
-        <Button x:Name="btn_agregarProducto" Content="Button" HorizontalAlignment="Center" Margin="0,615,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Agregar producto" Height="30" Style="{DynamicResource ButtonAgregarProducto}" x:Name="btn_agregarProducto" HorizontalAlignment="Center" Margin="0,615,0,0" VerticalAlignment="Top" Width="275" Click="btn_agregarProducto_Click"/>
 
 
-        <Button x:Name="btn_seleccionarImagenAgregarProducto" Content="Button" HorizontalAlignment="Left" Margin="318,547,0,0" VerticalAlignment="Top" Width="223"/>
-        <Image HorizontalAlignment="Left" Height="200" Margin="318,342,0,0" VerticalAlignment="Top" Width="223" Source="/vista/pantallas/VinylMePlease.jpg" Stretch="UniformToFill"/>
+        <Button x:Name="btn_seleccionarImagenAgregarProducto" Content="Agregar imagen" Style="{DynamicResource ButtonAgregarProducto}" HorizontalAlignment="Left" Margin="318,547,0,0" VerticalAlignment="Top" Width="223" Click="btn_seleccionarImagenAgregarProducto_Click"/>
+        <Image x:Name="img_agregarProducto" HorizontalAlignment="Left" Height="200" Margin="318,342,0,0" VerticalAlignment="Top" Width="223" Source="/vista/imagenes/vinyl_background.jpg" Stretch="UniformToFill"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" FontSize="20" FontFamily="Segoe UI Semibold" Content="Agregar un nuevo producto" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="483"/>
 

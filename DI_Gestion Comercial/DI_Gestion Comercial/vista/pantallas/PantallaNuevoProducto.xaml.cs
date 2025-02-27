@@ -21,13 +21,33 @@ namespace DI_Gestion_Comercial.vista.pantallas
     /// </summary>
     public partial class PantallaNuevoProducto : Window
     {
+        ControladorAgregarProductos cAgregarProductos = new ControladorAgregarProductos();
+
         public PantallaNuevoProducto()
         {    
             InitializeComponent();
-            ControladorAgregarProductos cAgregarProductos = new ControladorAgregarProductos();
             cAgregarProductos.establecerNombresProveedores(cb_proveedorAgregarProducto);
             cAgregarProductos.establecerNombresAutores(cb_autorAgregarProducto);
             cAgregarProductos.establecerNombresGeneros(cb_generoAgregarProducto);
+        }
+
+        private void btn_agregarProducto_Click(object sender, RoutedEventArgs e)
+        {
+            cAgregarProductos.crearProducto(
+                txt_nombreAgregarProducto,
+                txt_precioAgregarProducto,
+                txt_stockAgregarProducto,
+                txt_formatoAgregarProducto,
+                cb_autorAgregarProducto,
+                cb_proveedorAgregarProducto,
+                cb_generoAgregarProducto,
+                img_agregarProducto,
+                date_agregarProducto);
+        }
+
+        private void btn_seleccionarImagenAgregarProducto_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

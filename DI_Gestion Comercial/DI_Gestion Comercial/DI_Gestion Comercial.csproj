@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="controlador\ControladorAgregarProductos.cs" />
     <Compile Include="controlador\ControladorPantallaPrincipal.cs" />
+    <Compile Include="controlador\Utils.cs" />
     <Compile Include="modelo\Autor.cs" />
     <Compile Include="modelo\Database.cs" />
     <Compile Include="modelo\Genero.cs" />
@@ -172,16 +173,13 @@
     <Resource Include="vista\imagenes\MD73-Sweetart-01-Translucent.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="vista\pantallas\vinyl_background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="vista\imagenes\shopping-cart-white-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="vista\imagenes\search.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="vista\pantallas\VinylMePlease.jpg" />
+    <Resource Include="vista\imagenes\VinylMePlease.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

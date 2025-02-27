@@ -48,3 +48,53 @@ C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gest
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gesti.88B3A2D9.Up2Date
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.g.cs
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.baml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\DI_Gestion Comercial.exe.config
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\DI_Gestion Comercial.exe
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\DI_Gestion Comercial.pdb
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\Google.Protobuf.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\MySql.Data.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Buffers.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Memory.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\ZstdSharp.dll
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\Google.Protobuf.pdb
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\Google.Protobuf.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\MySql.Data.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Buffers.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Memory.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.csproj.AssemblyReference.cache
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.g.cs
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaPrincipal.g.cs
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\App.g.cs
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial_MarkupCompile.cache
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial_MarkupCompile.lref
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaNuevoProducto.baml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaPrincipal.baml
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.g.resources
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion_Comercial.Properties.Resources.resources
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.csproj.GenerateResource.cache
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.csproj.CoreCompileInputs.cache
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gesti.88B3A2D9.Up2Date
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.exe
+C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.pdb
