@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="1000" Width="1700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="PantallaPrincipal" Height="1000" Width="1700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

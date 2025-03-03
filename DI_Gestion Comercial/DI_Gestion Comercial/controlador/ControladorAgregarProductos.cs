@@ -32,22 +32,66 @@ namespace DI_Gestion_Comercial.controlador
             cBox.ItemsSource = list;
         }
 
-        public Producto crearProducto(TextBox nombre, TextBox precio, TextBox Stock, TextBox Formato, ComboBox autor, ComboBox proveedor, ComboBox genero, Image imagen, DatePicker fecha)
+        public Producto crearProducto(TextBox nombre, TextBox precio, TextBox stock, TextBox formato, ComboBox autor, ComboBox proveedor, ComboBox genero, Image imagen, DatePicker fecha)
         {
             // Comprobar los datos
             Boolean valoresValidos = true;
             string error = "";
 
+            // Comprobar si están vacíos los campos
+            if (nombre.Text.Trim().Length == 0)
+            {
+                error += "Debe rellenar el campo Nombre";
+                valoresValidos = false;
+            }
+            if (precio.Text.Trim().Length == 0)
+            {
+                error += "Debe rellenar el campo Precio";
+                valoresValidos = false;
+            }
+            if (stock.Text.Trim().Length == 0)
+            {
+                error += "Debe rellenar el campo Stock";
+                valoresValidos = false;
+            }
+            if (formato.Text.Trim().Length == 0)
+            {
+                error += "Debe rellenar el campo Formato";
+                valoresValidos = false;
+            }
+            if (autor.SelectedIndex == -1)
+            {
+                error += "Debe seleccionar un Autor";
+                valoresValidos = false;
+            }
+            if (proveedor.SelectedIndex == -1)
+            {
+                error += "Debe seleccionar un Proveedor";
+                valoresValidos = false;
+            }
+            if (genero.SelectedIndex == -1)
+            {
+                error += "Debe seleccionar un Género";
+                valoresValidos = false;
+            }
+            if (fecha.SelectedDate == null)
+            {
+                error += "Debe seleccionar una Fecha";
+                valoresValidos = false;
+            }
+
+            // Comprobar si los campos tienen el tipo de dato correcto
             if (!Utils.comprobarFloat(precio.Text))
             {
                 error += "Valor en el campo Precio no válido\n";
                 valoresValidos = false;
             }
-            else if (!Utils.comprobarInt(Stock.Text))
+            if (!Utils.comprobarInt(stock.Text))
             {
                 error += "Valor en el campo Stock no válido\n";
                 valoresValidos = false;
             }
+
             return null;
         }
 
