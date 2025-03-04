@@ -22,6 +22,7 @@ namespace DI_Gestion_Comercial.vista.pantallas
     public partial class PantallaNuevoProducto : Window
     {
         ControladorAgregarProductos cAgregarProductos = new ControladorAgregarProductos();
+        PantallaNuevoProducto instancia = null;
 
         public PantallaNuevoProducto()
         {    
@@ -29,12 +30,15 @@ namespace DI_Gestion_Comercial.vista.pantallas
             cAgregarProductos.establecerNombresProveedores(cb_proveedorAgregarProducto);
             cAgregarProductos.establecerNombresAutores(cb_autorAgregarProducto);
             cAgregarProductos.establecerNombresGeneros(cb_generoAgregarProducto);
+            instancia = this;
         }
 
         private void btn_agregarProducto_Click(object sender, RoutedEventArgs e)
         {
             cAgregarProductos.crearProducto(
+                this.instancia,
                 txt_nombreAgregarProducto,
+                txt_descripcionAgregarProducto,
                 txt_precioAgregarProducto,
                 txt_stockAgregarProducto,
                 txt_formatoAgregarProducto,
@@ -43,11 +47,12 @@ namespace DI_Gestion_Comercial.vista.pantallas
                 cb_generoAgregarProducto,
                 img_agregarProducto,
                 date_agregarProducto);
+                
         }
 
         private void btn_seleccionarImagenAgregarProducto_Click(object sender, RoutedEventArgs e)
         {
-
+            cAgregarProductos.seleccionarImagen(img_agregarProducto);
         }
     }
 }

@@ -48,7 +48,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        
+
         <!--Style boton-->
         <Style x:Key="ButtonAgregarProducto" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
@@ -74,8 +74,8 @@
                                 <Setter Property="Background" TargetName="border" Value="#8552ff"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="Foreground" Value="#5926d1"/>
+                                <Setter Property="Background" TargetName="border" Value="#FFA6D218"/>
+                                <Setter Property="Foreground" Value="white"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -89,39 +89,60 @@
         </Style>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#3DE0BFFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <Label Style="{DynamicResource labelStyleBasico}" Content="Nombre" HorizontalAlignment="Left" Margin="59,73,0,0" VerticalAlignment="Top" Width="226"/>
-        <TextBox x:Name="txt_nombreAgregarProducto" HorizontalAlignment="Left" Margin="59,105,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top" Width="226"/>
+        <TextBox x:Name="txt_nombreAgregarProducto" HorizontalAlignment="Left" Margin="59,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Descripción" HorizontalAlignment="Left" Margin="59,204,0,0" VerticalAlignment="Top" Width="226"/>
-        <TextBox x:Name="txt_descripcionAgregarProducto" HorizontalAlignment="Left" Margin="59,238,0,0" TextWrapping="Wrap" Text="Descripcion" VerticalAlignment="Top" Width="226" Height="200"/>
+        <TextBox x:Name="txt_descripcionAgregarProducto" HorizontalAlignment="Left" Margin="59,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Height="141"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Precio" HorizontalAlignment="Left" Margin="318,73,0,0" VerticalAlignment="Top" Width="223"/>
-        <TextBox x:Name="txt_precioAgregarProducto" HorizontalAlignment="Left" Margin="318,104,0,0" TextWrapping="Wrap" Text="Precio" VerticalAlignment="Top" Width="223"/>
+        <TextBox x:Name="txt_precioAgregarProducto" HorizontalAlignment="Left" Margin="318,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
 
-        <Label Style="{DynamicResource labelStyleBasico}" Content="Stock" HorizontalAlignment="Left" Margin="318,127,0,0" VerticalAlignment="Top" Width="223"/>
-        <TextBox x:Name="txt_stockAgregarProducto" HorizontalAlignment="Left" Margin="318,165,0,0" TextWrapping="Wrap" Text="Stock" VerticalAlignment="Top" Width="223"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Stock" HorizontalAlignment="Left" Margin="318,143,0,0" VerticalAlignment="Top" Width="223"/>
+        <TextBox x:Name="txt_stockAgregarProducto" HorizontalAlignment="Left" Margin="318,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
 
-        <Label Style="{DynamicResource labelStyleBasico}" Content="Formato" HorizontalAlignment="Left" Margin="318,195,0,0" VerticalAlignment="Top" Width="223"/>
-        <TextBox x:Name="txt_formatoAgregarProducto" HorizontalAlignment="Left" Margin="318,229,0,0" TextWrapping="Wrap" Text="Formato" VerticalAlignment="Top" Width="223"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Formato" HorizontalAlignment="Left" Margin="318,211,0,0" VerticalAlignment="Top" Width="223"/>
+        <TextBox x:Name="txt_formatoAgregarProducto" HorizontalAlignment="Left" Margin="318,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
 
-        <Label Style="{DynamicResource labelStyleBasico}" Content="Fecha" HorizontalAlignment="Left" Margin="318,259,0,0" VerticalAlignment="Top" Width="223"/>
-        <DatePicker x:Name="date_agregarProducto" HorizontalAlignment="Left" Margin="318,293,0,0" VerticalAlignment="Top" Width="223"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Fecha" HorizontalAlignment="Left" Margin="62,514,0,0" VerticalAlignment="Top" Width="223"/>
+        <DatePicker 
+           
+            x:Name="date_agregarProducto" HorizontalAlignment="Left" Margin="62,548,0,0" VerticalAlignment="Top" Width="223"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" Content="Autor" HorizontalAlignment="Left" Margin="59,136,0,0" VerticalAlignment="Top" Width="226"/>
-        <ComboBox x:Name="cb_generoAgregarProducto" HorizontalAlignment="Left" Margin="59,547,0,0" VerticalAlignment="Top" Width="226"/>
+        <ComboBox x:Name="cb_generoAgregarProducto" HorizontalAlignment="Left" Margin="59,482,0,0" VerticalAlignment="Top" Width="226"/>
 
-        <Label Style="{DynamicResource labelStyleBasico}" Content="Proveedor" HorizontalAlignment="Left" Margin="59,443,0,0" VerticalAlignment="Top" Width="226"/>
-        <ComboBox x:Name="cb_proveedorAgregarProducto" HorizontalAlignment="Left" Margin="59,473,0,0" VerticalAlignment="Top" Width="226"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Proveedor" HorizontalAlignment="Left" Margin="59,384,0,0" VerticalAlignment="Top" Width="226"/>
+        <ComboBox x:Name="cb_proveedorAgregarProducto" HorizontalAlignment="Left" Margin="59,414,0,0" VerticalAlignment="Top" Width="226"/>
 
-        <Label Style="{DynamicResource labelStyleBasico}" Content="Género" HorizontalAlignment="Left" Margin="59,513,0,0" VerticalAlignment="Top" Width="226"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Género" HorizontalAlignment="Left" Margin="59,448,0,0" VerticalAlignment="Top" Width="226"/>
         <ComboBox x:Name="cb_autorAgregarProducto" 
                   IsEditable="False"
                   HorizontalAlignment="Left" Margin="59,170,0,0" VerticalAlignment="Top" Width="226"/>
         <Button Content="Agregar producto" Height="30" Style="{DynamicResource ButtonAgregarProducto}" x:Name="btn_agregarProducto" HorizontalAlignment="Center" Margin="0,615,0,0" VerticalAlignment="Top" Width="275" Click="btn_agregarProducto_Click"/>
 
-
-        <Button x:Name="btn_seleccionarImagenAgregarProducto" Content="Agregar imagen" Style="{DynamicResource ButtonAgregarProducto}" HorizontalAlignment="Left" Margin="318,547,0,0" VerticalAlignment="Top" Width="223" Click="btn_seleccionarImagenAgregarProducto_Click"/>
-        <Image x:Name="img_agregarProducto" HorizontalAlignment="Left" Height="200" Margin="318,342,0,0" VerticalAlignment="Top" Width="223" Source="/vista/imagenes/vinyl_background.jpg" Stretch="UniformToFill"/>
+        <Label Style="{DynamicResource labelStyleBasico}" Content="Imagen" HorizontalAlignment="Left" Margin="318,277,0,0" VerticalAlignment="Top" Width="224"/>
+        <Button x:Name="btn_seleccionarImagenAgregarProducto"
+                Content="Agregar imagen" 
+                Style="{DynamicResource ButtonAgregarProducto}" 
+                HorizontalAlignment="Left" 
+                Margin="318,548,0,0" 
+                VerticalAlignment="Top" 
+                Width="223" 
+                
+                Click="btn_seleccionarImagenAgregarProducto_Click"/>
+        <Image x:Name="img_agregarProducto" 
+               HorizontalAlignment="Left" 
+               Height="223" 
+               Margin="318,316,0,0" 
+               VerticalAlignment="Top" Width="224" Source="/vista/imagenes/vinyl_background.jpg" Stretch="UniformToFill"/>
 
         <Label Style="{DynamicResource labelStyleBasico}" FontSize="20" FontFamily="Segoe UI Semibold" Content="Agregar un nuevo producto" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="483"/>
 

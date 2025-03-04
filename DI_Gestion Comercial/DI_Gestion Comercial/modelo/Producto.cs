@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace DI_Gestion_Comercial.modelo
 {
@@ -62,6 +64,41 @@ namespace DI_Gestion_Comercial.modelo
             this.Cod_Aut = Cod_Aut;
             this.Fecha = Fecha;
             this.Cod_Gen = Cod_Gen;
+        }
+
+        public static Boolean agregarNuevoProductoBBDD(string Nombre, string Descripcion, double Precio, int Stock, string Foto, int Cod_Prov, int Cod_Aut, DateTime Fecha, string Formato, int Cod_Gen)
+        {
+            Database db = new Database();
+            try
+            {
+                string query = "INSERT INTO producto" +
+                    "(Nombre, Descripcion, Precio, Stock, Foto, Cod_Prov, Cod_Aut, Fecha, Formato, Cod_Gen)" +
+                    " VALUES(" 
+                    + Nombre 
+                    + Descripcion
+                    + Precio
+                    + Stock
+                    + Foto
+                    + Cod_Prov
+                    + Cod_Aut
+                    + Fecha
+                    + Formato
+                    + Cod_Gen +
+                    ")";
+                MySqlCommand cmd = new MySqlCommand(query, db.establecerConexion());
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se ha agregado el producto con éxito", "Éxito al agregar", MessageBoxButton.OK);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo agregar el producto a la base de datos\n" + ex, "Error al agregar producto", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+            finally
+            {
+                db.desconectarConexion();
+            }
         }
 
         public static List<Producto> GetListProductos() { 
