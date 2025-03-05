@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Utilities;
 using System;
 using System.Collections.Generic;
@@ -66,23 +67,24 @@ namespace DI_Gestion_Comercial.modelo
             this.Cod_Gen = Cod_Gen;
         }
 
-        public static Boolean agregarNuevoProductoBBDD(string Nombre, string Descripcion, double Precio, int Stock, string Foto, int Cod_Prov, int Cod_Aut, DateTime Fecha, string Formato, int Cod_Gen)
+        public static Boolean agregarNuevoProductoBBDD(string Nombre, string Descripcion, double Precio, int Stock, string Foto, int Cod_Prov, int Cod_Aut, string Fecha, string Formato, int Cod_Gen)
         {
             Database db = new Database();
             try
             {
-                string query = "INSERT INTO producto" +
+                
+                    string query = "INSERT INTO producto" +
                     "(Nombre, Descripcion, Precio, Stock, Foto, Cod_Prov, Cod_Aut, Fecha, Formato, Cod_Gen)" +
-                    " VALUES(" 
-                    + Nombre 
-                    + Descripcion
-                    + Precio
-                    + Stock
-                    + Foto
-                    + Cod_Prov
-                    + Cod_Aut
-                    + Fecha
-                    + Formato
+                    " VALUES('" 
+                    + Nombre + "','"
+                    + Descripcion + "',"
+                    + Precio + ","
+                    + Stock + ",'"
+                    + Foto + "',"
+                    + Cod_Prov + ","
+                    + Cod_Aut + ",'"
+                    + Fecha + "','"
+                    + Formato + "',"
                     + Cod_Gen +
                     ")";
                 MySqlCommand cmd = new MySqlCommand(query, db.establecerConexion());
@@ -92,6 +94,7 @@ namespace DI_Gestion_Comercial.modelo
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 MessageBox.Show("No se pudo agregar el producto a la base de datos\n" + ex, "Error al agregar producto", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }

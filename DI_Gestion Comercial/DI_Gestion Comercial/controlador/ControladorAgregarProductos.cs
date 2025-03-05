@@ -47,7 +47,7 @@ namespace DI_Gestion_Comercial.controlador
                 // Guardar imagen internamente en el programa
                 //copiarImagen(imagen);
                 DateTime fechaFormateada = fecha.SelectedDate.Value;
-                MessageBox.Show(fechaFormateada.Date.ToString());
+                string fechaSQL = fechaFormateada.ToString("yyyy-MM-dd");
 
                 if (Producto.agregarNuevoProductoBBDD(
                     nombre.Text,
@@ -57,11 +57,10 @@ namespace DI_Gestion_Comercial.controlador
                     this.urlImagen.ToString(),
                     proveedor.SelectedIndex+1,
                     autor.SelectedIndex+1,
-                    fechaFormateada.Date.To,
+                    fechaSQL,
                     formato.Text,
                     genero.SelectedIndex + 1))
                 {
-                    MessageBox.Show("Se ha agregado el producto con éxito");
                     ventana.Close();
                 }
                 
