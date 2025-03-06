@@ -20,7 +20,7 @@ namespace DI_Gestion_Comercial.controlador
             }
             else
             {
-                listBox.Items.Clear();
+                //listBox.Items.Clear();
                 listBox.ItemsSource = listaProductosGeneral;
             }     
         }

@@ -72,15 +72,16 @@ namespace DI_Gestion_Comercial.controlador
          * Copia la imagen que esté en el source en la carpeta local del proyecto
          */
         public void copiarImagen(Image imagen)
-        {
+        {           
             string rutaImagen = "/vista/imagenes/vinyl_background.jpg";
             if (this.urlImagen != "")
             {
                 string nombreImagen = this.urlImagen.Substring(this.urlImagen.LastIndexOf("/") + 1);
-                rutaImagen = Path.Combine("/vista/imagenes/covers/" + nombreImagen);
-                System.IO.File.Copy(this.urlImagen, rutaImagen);
+                rutaImagen = Path.Combine("/vista/imagenes/covers/", nombreImagen);
+                System.IO.File.Copy(this.urlImagen, rutaImagen, true);
             }
             else urlImagen = rutaImagen;
+
         }
 
         public Boolean ComprobarCampos(TextBox nombre, TextBox precio, TextBox stock, TextBox formato, ComboBox autor, ComboBox proveedor, ComboBox genero, Image imagen, DatePicker fecha)

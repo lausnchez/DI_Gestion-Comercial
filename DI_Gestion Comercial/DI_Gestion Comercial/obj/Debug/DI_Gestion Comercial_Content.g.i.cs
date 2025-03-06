@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vista/pantallas/vinylmeplease.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("librerias/saeedisoftwpfuicontrols.dll")]
 
 

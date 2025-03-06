@@ -30,6 +30,7 @@ namespace DI_Gestion_Comercial.vista.pantallas
         {
             PantallaNuevoProducto nuevoProducto = new PantallaNuevoProducto();
             nuevoProducto.ShowDialog();
+            ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
         }
     }
 }

@@ -181,5 +181,6 @@
   <ItemGroup>
     <Resource Include="vista\imagenes\VinylMePlease.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

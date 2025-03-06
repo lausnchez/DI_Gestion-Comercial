@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\di_gestion comercial\\controlador\\controladoragregarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|c:\\users\\laura s\u00E1nchez\\desktop\\di_gestion-comercial\\di_gestion comercial\\di_gestion comercial\\vista\\pantallas\\pantallaprincipal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallaprincipal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|c:\\users\\laura s\u00E1nchez\\desktop\\di_gestion-comercial\\di_gestion comercial\\di_gestion comercial\\vista\\pantallas\\pantallaprincipal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallaprincipal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|c:\\users\\laura s\u00E1nchez\\desktop\\di_gestion-comercial\\di_gestion comercial\\di_gestion comercial\\controlador\\controladorpantallaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\controlador\\controladorpantallaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|c:\\users\\laura s\u00E1nchez\\desktop\\di_gestion-comercial\\di_gestion comercial\\di_gestion comercial\\controlador\\controladoragregarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\controlador\\controladoragregarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\di_gestion comercial\\modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|c:\\users\\laura s\u00E1nchez\\desktop\\di_gestion-comercial\\di_gestion comercial\\di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9303826-3681-45AD-B182-6636CFB2B9BA}|DI_Gestion Comercial\\DI_Gestion Comercial.csproj|solutionrelative:di_gestion comercial\\vista\\pantallas\\pantallanuevoproducto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +38,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 202,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "PantallaPrincipal.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml.cs",
+              "RelativeDocumentMoniker": "DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml.cs",
+              "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml.cs",
+              "RelativeToolTip": "DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwCAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T12:06:42.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ControladorPantallaPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorPantallaPrincipal.cs",
+              "RelativeDocumentMoniker": "DI_Gestion Comercial\\controlador\\ControladorPantallaPrincipal.cs",
+              "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorPantallaPrincipal.cs",
+              "RelativeToolTip": "DI_Gestion Comercial\\controlador\\ControladorPantallaPrincipal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T12:05:21.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PantallaPrincipal.xaml",
+              "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml",
+              "RelativeDocumentMoniker": "DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml",
+              "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml",
+              "RelativeToolTip": "DI_Gestion Comercial\\vista\\pantallas\\PantallaPrincipal.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-06T12:05:15.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\modelo\\Producto.cs",
               "RelativeDocumentMoniker": "DI_Gestion Comercial\\modelo\\Producto.cs",
@@ -43,20 +93,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PantallaNuevoProducto.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml.cs",
               "RelativeDocumentMoniker": "DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml.cs",
               "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml.cs",
               "RelativeToolTip": "DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowDAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowDAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T15:40:39.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "ControladorAgregarProductos.cs",
+              "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
+              "RelativeDocumentMoniker": "DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
+              "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
+              "RelativeToolTip": "DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswCoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T15:40:36.484Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "83041f55-21c7-40d7-aeed-0a721d225b77",
+        "Display": 0,
+        "X": 32,
+        "Y": 70,
+        "Width": 2168,
+        "Height": 1000,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PantallaNuevoProducto.xaml",
               "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml",
               "RelativeDocumentMoniker": "DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml",
@@ -64,19 +148,6 @@
               "RelativeToolTip": "DI_Gestion Comercial\\vista\\pantallas\\PantallaNuevoProducto.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-04T15:33:34.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControladorAgregarProductos.cs",
-              "DocumentMoniker": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
-              "RelativeDocumentMoniker": "DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
-              "ToolTip": "C:\\Users\\Laura S\u00E1nchez\\Desktop\\DI_Gestion-Comercial\\DI_Gestion Comercial\\DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
-              "RelativeToolTip": "DI_Gestion Comercial\\controlador\\ControladorAgregarProductos.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAA9wD4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T15:40:36.484Z",
               "EditorCaption": ""
             }
           ]
