@@ -338,13 +338,20 @@
                                                 <Setter.Value>
                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                                                         <GradientStop Color="Transparent" Offset="0"/>
-                                                        <GradientStop Color="#3DD8FFBF" Offset="1"/>
+                                                        <GradientStop Color="#7AFBABFF" Offset="1"/>
                                                     </LinearGradientBrush>
                                                 </Setter.Value>
                                             </Setter>
                                         </Trigger>
                                         <Trigger Property="IsSelected" Value="True">
-                                            <Setter TargetName="Border" Property="Background" Value="#deffd9"/>
+                                            <Setter TargetName="Border" Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                                                        <GradientStop Color="#7AC5ABFF"/>
+                                                        <GradientStop Color="Transparent" Offset="0.75"/>
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
@@ -718,7 +725,11 @@
                                Stretch="UniformToFill"
                                Width="180" 
                                Height="180"
-                               Margin="10"></Image>
+                               Margin="10">
+                                <Image.Effect>
+                                    <DropShadowEffect Direction="225" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                                </Image.Effect>
+                            </Image>
                             <StackPanel Grid.Column="1" Margin="20,0,0,0">
                                 <TextBlock
                                     x:Name="txt_nombreProducto"
@@ -753,36 +764,59 @@
                                     FontFamily="Segoe UI Light"
                                     Foreground="#FF7D45D2"
                                     />
-                                <Button Style="{DynamicResource BotonCompra}" HorizontalAlignment="Left" Margin="20">
-                                    <Button.Content>
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                            <Image 
-                                                Height="20"
-                                                Margin="0,0,10,0"
-                                                Source="/vista/imagenes/shopping-cart-white-icon.png"/>
-                                            <TextBox
-                                                Background="Transparent"
-                                                BorderThickness="0"
-                                                Height="20"
-                                                VerticalAlignment="Center"
-                                                Foreground="White">
-                                                Agregar a la cesta
-                                            </TextBox>
-                                        </StackPanel>
-                                    </Button.Content>
-                                </Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Style="{DynamicResource BotonCompra}" HorizontalAlignment="Left" Margin="20">
+                                        <Button.Content>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Image 
+                                                    Height="20"
+                                                    Margin="0,0,10,0"
+                                                    Source="/vista/imagenes/shopping-cart-white-icon.png"/>
+                                                <TextBox
+                                                    Background="Transparent"
+                                                    BorderThickness="0"
+                                                    Height="20"
+                                                    VerticalAlignment="Center"
+                                                    Foreground="White">
+                                                    Agregar a la cesta
+                                                </TextBox>
+                                            </StackPanel>
+                                        </Button.Content>
+                                    </Button>
+                                    <TextBlock Text="{Binding Stock}"
+                                             VerticalAlignment="Center"
+                                             FontFamily="Segoe UI Bold"
+                                             Foreground="Crimson"
+                                             FontSize="20"
+                                             Background="Transparent"/>
+                                    <TextBlock Text=" en stock"
+                                             VerticalAlignment="Center"
+                                             FontFamily="Segoe UI Light"
+                                             Foreground="Crimson"
+                                             FontSize="20"
+                                             Background="Transparent"/>
+                                </StackPanel>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
-                                <TextBox 
-                                    HorizontalAlignment="Center"
-                                    Text="{Binding Precio}"
-                                    Foreground="Crimson"
-                                    Background="Transparent"
-                                    BorderThickness="0"
-                                    FontSize="24"
-                                    FontFamily="Segoe UI Semibold"
-                                    Margin="0,0,0,10"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock 
+                                        HorizontalAlignment="Center"
+                                        Text="{Binding Precio}"
+                                        Foreground="Crimson"
+                                        Background="Transparent"
+                                        FontSize="24"
+                                        FontFamily="Segoe UI Semibold"
+                                        Margin="0,0,0,10"/>
+                                    <TextBlock 
+                                        HorizontalAlignment="Center"
+                                        Text="€"
+                                        Foreground="Crimson"
+                                        Background="Transparent"
+                                        FontSize="24"
+                                        FontFamily="Segoe UI Semibold"
+                                        Margin="0,0,0,10"/>
+                                </StackPanel>
                                 <Button  Style="{DynamicResource ButtonOpcionesProducto}"
                                      x:Name="btn_editarProducto">Editar Producto</Button>
                                 <Button Style="{DynamicResource ButtonOpcionesProducto}" 
@@ -861,15 +895,15 @@
             BorderBrush="#5926d1" 
             Height="50" 
             Margin="570,141,414,9">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock 
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBox
                     Margin="25,0,25,0"
-                    Width="600"
-                    Height="30"
-                    VerticalAlignment="Center"
+                    Width="602"
+                    Height="20"
+                    BorderThickness="0"
                     >
                     Patata
-                </TextBlock>
+                </TextBox>
 
                 <!--Botón de buscar-->
                 <Border 

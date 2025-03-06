@@ -98,3 +98,6 @@ C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Ges
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gesti.88B3A2D9.Up2Date
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.exe
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial.pdb
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaAgregarAutor.g.cs
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaAgregarAutor.baml
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial_Content.g.cs

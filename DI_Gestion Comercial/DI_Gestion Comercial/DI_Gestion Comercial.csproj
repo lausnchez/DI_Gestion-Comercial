@@ -119,6 +119,9 @@
     <Compile Include="modelo\Genero.cs" />
     <Compile Include="modelo\Producto.cs" />
     <Compile Include="modelo\Proveedor.cs" />
+    <Compile Include="vista\pantallas\PantallaAgregarAutor.xaml.cs">
+      <DependentUpon>PantallaAgregarAutor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\pantallas\PantallaNuevoProducto.xaml.cs">
       <DependentUpon>PantallaNuevoProducto.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
     <Resource Include="vista\imagenes\vinyl_background.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="vista\pantallas\PantallaAgregarAutor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\pantallas\PantallaNuevoProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,6 +188,8 @@
   <ItemGroup>
     <Resource Include="vista\imagenes\VinylMePlease.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="vista\imagenes\covers\hitMeHardAndSoft.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
