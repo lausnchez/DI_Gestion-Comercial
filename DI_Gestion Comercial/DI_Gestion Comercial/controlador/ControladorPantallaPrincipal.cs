@@ -24,5 +24,10 @@ namespace DI_Gestion_Comercial.controlador
                 listBox.ItemsSource = listaProductosGeneral;
             }     
         }
+
+        public static void agregarAutor()
+        {
+            
+        }
     }
 }
