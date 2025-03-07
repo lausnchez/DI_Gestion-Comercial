@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="1000" Width="1700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="PantallaPrincipal" Height="1100" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -205,11 +205,13 @@
         <!--Estilo del selector de lista de productos-->
         <Style x:Key="btn_selectorLista" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual3}"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="#FFA6D218"/>
+            <Setter Property="Background" Value="#BFFFFFFF"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="Foreground" Value="#5926d1"/>
             <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
-            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="BorderThickness" Value="0,0,3,0"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
@@ -644,7 +646,7 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
-        
+
         <!-- Estilo de los MenuItem-->
         <Style x:Key="MenuItemStyle" TargetType="{x:Type MenuItem}">
             <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
@@ -676,160 +678,263 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
+
         <!-- ORGANIZACIÓN DE LA VENTANA -->
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image 
+
+        <Image
             HorizontalAlignment="Left" 
             Height="1244" 
             VerticalAlignment="Top" 
-            Width="1261" 
+            Width="1260" 
             Source="/vista/imagenes/MD73-Sweetart-01-Translucent.jpg" 
-            Margin="-596,-130,0,0" 
-            Grid.RowSpan="3"/>
+            Margin="-702,-92,0,0" 
+            Grid.RowSpan="2"
+            Opacity="0.75"
+            Panel.ZIndex="0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
-        <!-- Listado -->
-        <ListBox Style="{DynamicResource StyleListadoProductos}" 
-            x:Name="listadoProductos_principal" 
-            Grid.Row="2"
-            d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Width="1100" Height="700" Margin="549,0,51,46" BorderThickness="0" Grid.RowSpan="2" Background="Transparent">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="200"></ColumnDefinition>
-                                <ColumnDefinition Width="600"></ColumnDefinition>
-                                <ColumnDefinition Width="240"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+            <!-- Listado -->
+            <ListBox Style="{DynamicResource StyleListadoProductos}" 
+                x:Name="listadoProductos_principal"
+                Panel.ZIndex="10"
+                Grid.Column="1"
+                d:ItemsSource="{d:SampleData ItemCount=5}" 
+                Width="1100" Height="780" 
+                Margin="0,65,51,46" 
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
-                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
 
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"></ColumnDefinition>
+                                    <ColumnDefinition Width="600"></ColumnDefinition>
+                                    <ColumnDefinition Width="240"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
 
-                            <Image Grid.Column="0"
-                               Source="{Binding Foto}" 
-                               Stretch="UniformToFill"
-                               Width="180" 
-                               Height="180"
-                               Margin="10">
-                                <Image.Effect>
-                                    <DropShadowEffect Direction="225" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
-                                </Image.Effect>
-                            </Image>
-                            <StackPanel Grid.Column="1" Margin="20,0,0,0">
-                                <TextBlock
-                                    x:Name="txt_nombreProducto"
-                                    Grid.Column="1"
-                                    Text="{Binding Nombre}"
-                                    Margin="20"
-                                    Height="40"
-                                    FontSize="24" 
-                                    FontFamily="Segoe UI Semibold" 
-                                    Foreground="#FF281B80"
-                                    />
-                                <TextBlock
-                                    x:Name="txt_autorProducto"
-                                    Text="{Binding Nombre_Autor}"
-                                    Margin="20,0,0,0"
-                                    FontSize="18"
-                                    FontFamily="Segoe UI Semibold"
-                                    />
-                                <TextBlock
-                                    x:Name="txt_fechaProducto"
-                                    Text="{Binding Fecha, StringFormat=d}"
-                                    Margin="20,5,0,0"
-                                    FontSize="18"
-                                    FontFamily="Segoe UI Light" 
-                                    Foreground="#FF7D45D2"
-                                    />
-                                <TextBlock
-                                    x:Name="txt_formatoProducto"
-                                    Text="{Binding Formato}"
-                                    Margin="20,5,0,0"
-                                    FontSize="18"
-                                    FontFamily="Segoe UI Light"
-                                    Foreground="#FF7D45D2"
-                                    />
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Style="{DynamicResource BotonCompra}" HorizontalAlignment="Left" Margin="20">
-                                        <Button.Content>
-                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                                <Image 
-                                                    Height="20"
-                                                    Margin="0,0,10,0"
-                                                    Source="/vista/imagenes/shopping-cart-white-icon.png"/>
-                                                <TextBox
-                                                    Background="Transparent"
-                                                    BorderThickness="0"
-                                                    Height="20"
-                                                    VerticalAlignment="Center"
-                                                    Foreground="White">
-                                                    Agregar a la cesta
-                                                </TextBox>
-                                            </StackPanel>
-                                        </Button.Content>
-                                    </Button>
-                                    <TextBlock Text="{Binding Stock}"
-                                             VerticalAlignment="Center"
-                                             FontFamily="Segoe UI Bold"
-                                             Foreground="Crimson"
-                                             FontSize="20"
-                                             Background="Transparent"/>
-                                    <TextBlock Text=" en stock"
-                                             VerticalAlignment="Center"
-                                             FontFamily="Segoe UI Light"
-                                             Foreground="Crimson"
-                                             FontSize="20"
-                                             Background="Transparent"/>
-                                </StackPanel>
-                            </StackPanel>
 
-                            <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <TextBlock 
-                                        HorizontalAlignment="Center"
-                                        Text="{Binding Precio}"
-                                        Foreground="Crimson"
-                                        Background="Transparent"
-                                        FontSize="24"
-                                        FontFamily="Segoe UI Semibold"
-                                        Margin="0,0,0,10"/>
-                                    <TextBlock 
-                                        HorizontalAlignment="Center"
-                                        Text="€"
-                                        Foreground="Crimson"
-                                        Background="Transparent"
-                                        FontSize="24"
-                                        FontFamily="Segoe UI Semibold"
-                                        Margin="0,0,0,10"/>
+                                <Image Grid.Column="0"
+                       Source="{Binding Foto}" 
+                       Stretch="UniformToFill"
+                       Width="180" 
+                       Height="180"
+                       Margin="10">
+                                    <Image.Effect>
+                                        <DropShadowEffect Direction="225" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                                    </Image.Effect>
+                                </Image>
+                                <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                                    <TextBlock
+                            x:Name="txt_nombreProducto"
+                            Grid.Column="1"
+                            Text="{Binding Nombre}"
+                            Margin="20"
+                            Height="40"
+                            FontSize="24" 
+                            FontFamily="Segoe UI Semibold" 
+                            Foreground="#FF281B80"
+                            />
+                                    <TextBlock
+                            x:Name="txt_autorProducto"
+                            Text="{Binding Nombre_Autor}"
+                            Margin="20,0,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Semibold"
+                            />
+                                    <TextBlock
+                            x:Name="txt_fechaProducto"
+                            Text="{Binding Fecha, StringFormat=d}"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Light" 
+                            Foreground="#FF7D45D2"
+                            />
+                                    <TextBlock
+                            x:Name="txt_formatoProducto"
+                            Text="{Binding Formato}"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Light"
+                            Foreground="#FF7D45D2"
+                            />
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{DynamicResource BotonCompra}" HorizontalAlignment="Left" Margin="20">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Image 
+                                            Height="20"
+                                            Margin="0,0,10,0"
+                                            Source="/vista/imagenes/shopping-cart-white-icon.png"/>
+                                                    <TextBox
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Height="20"
+                                            VerticalAlignment="Center"
+                                            Foreground="White">
+                                                        Agregar a la cesta
+                                                    </TextBox>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                        <TextBlock Text="{Binding Stock}"
+                                     VerticalAlignment="Center"
+                                     FontFamily="Segoe UI Bold"
+                                     Foreground="Crimson"
+                                     FontSize="20"
+                                     Background="Transparent"/>
+                                        <TextBlock Text=" en stock"
+                                     VerticalAlignment="Center"
+                                     FontFamily="Segoe UI Light"
+                                     Foreground="Crimson"
+                                     FontSize="20"
+                                     Background="Transparent"/>
+                                    </StackPanel>
                                 </StackPanel>
-                                <Button  Style="{DynamicResource ButtonOpcionesProducto}"
-                                     x:Name="btn_editarProducto">Editar Producto</Button>
-                                <Button Style="{DynamicResource ButtonOpcionesProducto}" 
-                                    x:Name="btn_eliminarProducto">Eliminar Producto</Button>
-                            </StackPanel>
+
+                                <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock 
+                                HorizontalAlignment="Center"
+                                Text="{Binding Precio}"
+                                Foreground="Crimson"
+                                Background="Transparent"
+                                FontSize="24"
+                                FontFamily="Segoe UI Semibold"
+                                Margin="0,0,0,10"/>
+                                        <TextBlock 
+                                HorizontalAlignment="Center"
+                                Text="€"
+                                Foreground="Crimson"
+                                Background="Transparent"
+                                FontSize="24"
+                                FontFamily="Segoe UI Semibold"
+                                Margin="0,0,0,10"/>
+                                    </StackPanel>
+                                    <Button  Style="{DynamicResource ButtonOpcionesProducto}"
+                             x:Name="btn_editarProducto">Editar Producto</Button>
+                                    <Button Style="{DynamicResource ButtonOpcionesProducto}" 
+                            x:Name="btn_eliminarProducto">Eliminar Producto</Button>
+                                </StackPanel>
+                            </Grid>
+                            <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+
                         </Grid>
-                        <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Width="700"
+                CornerRadius="25" 
+                BorderThickness="2" 
+                BorderBrush="#5926d1" 
+                Height="50" 
+                Margin="0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBox
+            Margin="25,0,25,0"
+            Width="602"
+            Height="20"
+            BorderThickness="0"
+            >
+                        Patata
+                    </TextBox>
 
-        </ListBox>
+                    <!--Botón de buscar-->
+                    <Border 
+            CornerRadius="25" 
+            Background="#5926d1" 
+            Height="40" 
+            Width="40" Padding="0"
+            BorderThickness="0">
+                        <Button Style="{DynamicResource ButtonCarritoCompra}" Width="40" Height="40" Background="Transparent" BorderThickness="0">
+                            <Image Source="/vista/imagenes/search.png" Height="20"/>
+                        </Button>
+                    </Border>
+
+                </StackPanel>
+            </Border>
+
+            <!--- Botones de selección de listas -->
+            <Border 
+                BorderThickness="5,0,5,5" 
+                BorderBrush="#5926d1" 
+                Height="275" Width="250"
+                Padding="10"
+                CornerRadius="25" VerticalAlignment="Top"
+                Margin="25">
+            <StackPanel 
+                    Grid.Column="0"  
+                    Height="250" Width="200"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Orientation="Vertical">
+                <Button 
+                     Style="{DynamicResource btn_selectorLista}" 
+                     Content="Productos" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top"
+                     Grid.Row="1"/>
+                <Button 
+                     Style="{DynamicResource btn_selectorLista}" 
+                     Content="Clientes" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top"
+                     Grid.Row="1"/>
+                <Button 
+                    Style="{DynamicResource btn_selectorLista}" 
+                    Content="Proveedores" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Grid.Row="1"/>
+                <Button 
+                     Style="{DynamicResource btn_selectorLista}" 
+                     Content="Autores" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     Grid.Row="1"/>
+                <Button 
+                     Style="{DynamicResource btn_selectorLista}" 
+                     Content="Géneros" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     Grid.Row="1"/>
+            </StackPanel>
+            </Border>
+        </Grid>
 
         <!--- Botón de carrito de la compra -->
         <Button  
@@ -843,82 +948,6 @@
             <Image Source="/vista/imagenes/shopping-cart-white-icon.png" Width="25" />
         </Button>
 
-        <!--- Botones de selección de listas -->
-        <StackPanel 
-            Grid.Row="1"  
-            Height="50" Width="1100"
-            HorizontalAlignment="Right"
-            Margin="0,0,50,0"
-            Orientation="Horizontal">
-            <Button 
-                 Style="{DynamicResource btn_selectorLista}" 
-                 Content="Productos" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" 
-                 Height="46" Width="138"
-                 Grid.Row="1"/>
-            <Button 
-                 Style="{DynamicResource btn_selectorLista}" 
-                 Content="Clientes" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" 
-                 Height="46" Width="138"
-                 Grid.Row="1"/>
-            <Button 
-                 Style="{DynamicResource btn_selectorLista}" 
-                 Content="Proveedores" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" 
-                 Height="46" Width="138"
-                 Grid.Row="1"/>
-            <Button 
-                 Style="{DynamicResource btn_selectorLista}" 
-                 Content="Autores" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" 
-                 Height="46" Width="138"
-                 Grid.Row="1"/>
-            <Button 
-                 Style="{DynamicResource btn_selectorLista}" 
-                 Content="Géneros" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" 
-                 Height="46" Width="138"
-                 Grid.Row="1"/>
-        </StackPanel>
-
-
-        <Border 
-            Grid.Row="1"
-            CornerRadius="25" 
-            BorderThickness="2" 
-            BorderBrush="#5926d1" 
-            Height="50" 
-            Margin="570,141,414,9">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <TextBox
-                    Margin="25,0,25,0"
-                    Width="602"
-                    Height="20"
-                    BorderThickness="0"
-                    >
-                    Patata
-                </TextBox>
-
-                <!--Botón de buscar-->
-                <Border 
-                    CornerRadius="25" 
-                    Background="#5926d1" 
-                    Height="40" 
-                    Width="40" Padding="0"
-                    BorderThickness="0">
-                    <Button Style="{DynamicResource ButtonCarritoCompra}" Width="40" Height="40" Background="Transparent" BorderThickness="0">
-                        <Image Source="/vista/imagenes/search.png" Height="20"/>
-                    </Button>
-                </Border>
-
-            </StackPanel>
-        </Border>
 
         <Menu Style="{DynamicResource MenuStylePrincipal}" Grid.Row="0">
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Agregar Producto" Foreground="White" Height="30" Padding="10,0,10,0" Click="MenuItem_Click"></MenuItem>
