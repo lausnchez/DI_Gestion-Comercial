@@ -1,4 +1,5 @@
 ﻿using DI_Gestion_Comercial.controlador;
+using DI_Gestion_Comercial.modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,10 @@ namespace DI_Gestion_Comercial.vista.pantallas
         {
             PantallaEstadisticas pantallaEstadisticas = new PantallaEstadisticas();
             pantallaEstadisticas.ShowDialog();
+        }
+        private void ItemDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ControladorPantallaPrincipal.mostrarVentanaDetalleProducto();
         }
     }
 }

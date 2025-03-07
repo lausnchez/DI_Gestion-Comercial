@@ -29,5 +29,10 @@ namespace DI_Gestion_Comercial.controlador
         {
             
         }
+
+        public static void mostrarVentanaDetalleProducto(Producto prod)
+        {
+
+        }
     }
 }

@@ -112,3 +112,5 @@ C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gest
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.xml
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaDetalleProducto.g.cs
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaDetalleProducto.baml

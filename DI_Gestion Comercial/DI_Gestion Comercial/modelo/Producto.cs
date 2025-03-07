@@ -149,5 +149,54 @@ namespace DI_Gestion_Comercial.modelo
                 return null;
             }
         }
+
+        public static Producto GetProducto(int idProducto)
+        {
+            Database db = new Database();
+            try
+            {
+                string query = "SELECT producto.Cod_Pro, producto.Nombre, producto.Descripcion, producto.Precio," +
+                    " producto.Stock, producto.Foto, proveedor.Nombre \"nombreProveedor\", autores.Nombre \"nombreAutor\", producto.Fecha, " +
+                    "producto.Formato, generos.Nombre \"nombreGenero\", producto.Cod_Prov, producto.Cod_Aut, producto.Cod_Gen" +
+                    " FROM producto, autores, generos, proveedor " +
+                    "WHERE producto.Cod_Aut = autores.Cod_Aut " +
+                    "AND producto.Cod_Prov = proveedor.Cod_Prov " +
+                    "AND producto.Cod_Gen = generos.Cod_Gen " +
+                    "AND producto.Cod_Pro = " + idProducto + ";";
+
+                MySqlCommand cmd = new MySqlCommand(query, db.establecerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                Producto resultado = new Producto();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Producto producto = new Producto();
+                    producto.Cod_Pro = int.Parse(reader["Cod_Pro"].ToString());
+                    producto.Nombre = reader["Nombre"].ToString();
+                    producto.Descripcion = reader["Descripcion"].ToString();
+                    producto.Precio = double.Parse(reader["Precio"].ToString());
+                    producto.Stock = int.Parse(reader["Stock"].ToString());
+                    producto.Foto = reader["Foto"].ToString();
+                    producto.Cod_Prov = int.Parse(reader["Cod_Prov"].ToString());
+                    producto.Cod_Aut = int.Parse(reader["Cod_Aut"].ToString());
+                    producto.Fecha = DateTime.Parse(reader["Fecha"].ToString());
+                    producto.Formato = reader["Formato"].ToString();
+                    producto.Cod_Gen = int.Parse(reader["Cod_Gen"].ToString());
+
+                    producto.Nombre_Autor = reader["nombreAutor"].ToString();
+                    producto.Nombre_Proveedor = reader["nombreProveedor"].ToString();
+                    producto.Nombre_Genero = reader["nombreGenero"].ToString();
+
+                    resultado = producto;
+                }
+                db.desconectarConexion();
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                return null;
+            }
+        }
     }
 }
