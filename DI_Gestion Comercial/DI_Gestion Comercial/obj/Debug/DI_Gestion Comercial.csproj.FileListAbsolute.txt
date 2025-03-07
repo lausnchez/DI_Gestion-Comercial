@@ -104,3 +104,11 @@ C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gest
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaAgregarAutor.g.cs
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\DI_Gestion Comercial_Content.g.cs
 C:\Users\Laura Sánchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaAgregarAutor.baml
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaEstadisticas.g.cs
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\obj\Debug\vista\pantallas\PantallaEstadisticas.baml
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.dll
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.pdb
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.xml
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\laura.sanchez\Desktop\DI_Gestion-Comercial\DI_Gestion Comercial\DI_Gestion Comercial\bin\Debug\LiveCharts.Wpf.xml

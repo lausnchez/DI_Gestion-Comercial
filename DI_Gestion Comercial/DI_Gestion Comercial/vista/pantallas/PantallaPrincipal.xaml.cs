@@ -32,5 +32,11 @@ namespace DI_Gestion_Comercial.vista.pantallas
             nuevoProducto.ShowDialog();
             ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
         }
+
+        private void btn_principalEstadísticas_Click(object sender, RoutedEventArgs e)
+        {
+            PantallaEstadisticas pantallaEstadisticas = new PantallaEstadisticas();
+            pantallaEstadisticas.ShowDialog();
+        }
     }
 }

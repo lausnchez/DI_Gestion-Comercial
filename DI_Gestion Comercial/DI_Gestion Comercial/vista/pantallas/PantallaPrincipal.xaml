@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
         mc:Ignorable="d"
-        Title="PantallaPrincipal" Height="1100" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="PantallaPrincipal" Height="1050" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -30,9 +30,9 @@
         <Style x:Key="BotonCompra" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="#5926d1"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
@@ -49,7 +49,7 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="#532fa8"/>
+                                <Setter Property="Background" TargetName="border" Value="#9340ff"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
@@ -95,6 +95,7 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="40"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
@@ -109,8 +110,8 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
+                                <Setter Property="Background" TargetName="border" Value="#FFC0E72A"/>
+                                <Setter Property="Foreground" Value="#FF2D450A"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background1}"/>
@@ -211,7 +212,7 @@
             <Setter Property="Height" Value="50"/>
             <Setter Property="Foreground" Value="#5926d1"/>
             <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
-            <Setter Property="BorderThickness" Value="0,0,3,0"/>
+            <Setter Property="BorderThickness" Value="0,0,2,0"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
@@ -226,15 +227,18 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background">
+                                <Setter Property="Background" Value="#BF5926D1">
+                                    <!--
                                     <Setter.Value>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Offset="1.25" Color="#3DD8FFBF"/>
                                             <GradientStop Color="White" Offset="0"/>
                                         </LinearGradientBrush>
                                     </Setter.Value>
+                                    -->
                                 </Setter>
-                                <Setter Property="BorderThickness" Value="0,0,0,4"/>
+                                <Setter Property="BorderThickness" Value="0,0,4,0"/>
+                                <Setter Property="Foreground" Value="White"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background3}"/>
@@ -683,7 +687,7 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -852,57 +856,79 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <Border
-                Grid.Row="1"
+            <!--- Botón de carrito de la compra -->
+            <StackPanel 
+                Orientation="Horizontal" 
                 Grid.Column="1"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Width="700"
-                CornerRadius="25" 
-                BorderThickness="2" 
-                BorderBrush="#5926d1" 
-                Height="50" 
-                Margin="0">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBox
-            Margin="25,0,25,0"
-            Width="602"
-            Height="20"
-            BorderThickness="0"
-            >
-                        Patata
-                    </TextBox>
+                VerticalAlignment="Top">
+                <Button  
+                    Grid.Column="1"
+                    x:Name="btn_carritoCompra" 
+                    Style="{DynamicResource ButtonCarritoCompra}" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Height="60" Width="60"
+                    Grid.Row="1">
+                    <Image Source="/vista/imagenes/shopping-cart-white-icon.png" Width="25" />
+                </Button>
 
-                    <!--Botón de buscar-->
-                    <Border 
-            CornerRadius="25" 
-            Background="#5926d1" 
-            Height="40" 
-            Width="40" Padding="0"
-            BorderThickness="0">
-                        <Button Style="{DynamicResource ButtonCarritoCompra}" Width="40" Height="40" Background="Transparent" BorderThickness="0">
-                            <Image Source="/vista/imagenes/search.png" Height="20"/>
-                        </Button>
-                    </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Width="700"
+                    CornerRadius="25" 
+                    BorderThickness="2" 
+                    BorderBrush="#5926d1" 
+                    Height="50" 
+                    Margin="40,0,0,0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBox
+                            Margin="25,0,25,0"
+                            Width="602"
+                            Height="20"
+                            BorderThickness="0">
+                            Patata</TextBox>
 
-                </StackPanel>
-            </Border>
+                        <!--Botón de buscar-->
+                        <Border 
+                            CornerRadius="25" 
+                            Background="#5926d1" 
+                            Height="40" 
+                            Width="40" Padding="0"
+                            BorderThickness="0">
+                            <Button Style="{DynamicResource ButtonCarritoCompra}" Width="40" Height="40" Background="Transparent" BorderThickness="0">
+                                <Image Source="/vista/imagenes/search.png" Height="20"/>
+                            </Button>
+                        </Border>
+
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            
 
             <!--- Botones de selección de listas -->
             <Border 
                 BorderThickness="5,0,5,5" 
                 BorderBrush="#5926d1" 
-                Height="275" Width="250"
-                Padding="10"
+                Height="350" Width="250"
+                Padding="15"
                 CornerRadius="25" VerticalAlignment="Top"
-                Margin="25">
+                Margin="25,0,25,25">
             <StackPanel 
                     Grid.Column="0"  
-                    Height="250" Width="200"
+                    Height="310" Width="200"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
                     Orientation="Vertical">
-                <Button 
+                    <TextBlock
+                        Text="Filtrar por:"
+                        FontSize="24" 
+                        FontFamily="Segoe UI Semibold" 
+                        Foreground="#FF281B80"
+                        Margin="7,7,7,15"/>
+                    <Button 
                      Style="{DynamicResource btn_selectorLista}" 
                      Content="Productos" 
                      HorizontalAlignment="Left" 
@@ -934,20 +960,9 @@
                      Grid.Row="1"/>
             </StackPanel>
             </Border>
+
+            <Button x:Name="btn_principalEstadísticas" Style="{DynamicResource BotonCompra}" Width="250" Content="Estadísticas" Click="btn_principalEstadísticas_Click"></Button>
         </Grid>
-
-        <!--- Botón de carrito de la compra -->
-        <Button  
-            x:Name="btn_carritoCompra" 
-            Style="{DynamicResource ButtonCarritoCompra}" 
-            HorizontalAlignment="Left" 
-            Margin="1489,58,0,0" 
-            VerticalAlignment="Top" 
-            Height="60" Width="60"
-            Grid.Row="1">
-            <Image Source="/vista/imagenes/shopping-cart-white-icon.png" Width="25" />
-        </Button>
-
 
         <Menu Style="{DynamicResource MenuStylePrincipal}" Grid.Row="0">
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Agregar Producto" Foreground="White" Height="30" Padding="10,0,10,0" Click="MenuItem_Click"></MenuItem>

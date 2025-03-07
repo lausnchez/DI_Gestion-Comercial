@@ -45,7 +45,7 @@ namespace DI_Gestion_Comercial.controlador
             if (ComprobarCampos(nombre, precio, stock, formato, autor, proveedor, genero, imagen, fecha))
             {
                 // Guardar imagen internamente en el programa
-                //copiarImagen(imagen);
+                copiarImagen(imagen);
                 DateTime fechaFormateada = fecha.SelectedDate.Value;
                 string fechaSQL = fechaFormateada.ToString("yyyy-MM-dd");
 
@@ -160,9 +160,10 @@ namespace DI_Gestion_Comercial.controlador
             bool? result = dialog.ShowDialog();
             if (result == true)
             {
+                this.urlImagen = dialog.FileName;
                 imagen.Source = new BitmapImage(new Uri(dialog.FileName));
             }
-            this.urlImagen = dialog.FileName;
+            
         }
 
     }
