@@ -74,7 +74,8 @@ namespace DI_Gestion_Comercial.vista.pantallas
 
         private void ProductoDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            ControladorPantallaPrincipal.mostrarVentanaDetalleProducto();
+            Producto producto = (Producto)listadoProductos_principal.SelectedItem;
+            ControladorPantallaPrincipal.mostrarVentanaDetalleProducto(Producto.GetProducto(producto.Cod_Pro));
         }
     }
 }

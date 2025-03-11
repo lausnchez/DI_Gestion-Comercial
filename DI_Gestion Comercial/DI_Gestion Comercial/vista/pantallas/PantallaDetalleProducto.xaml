@@ -1,12 +1,129 @@
-﻿<Window x:Class="DI_Gestion_Comercial.vista.pantallas.Window1"
+﻿<Window x:Class="DI_Gestion_Comercial.vista.pantallas.PantallaDetalleProducto"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
         mc:Ignorable="d"
-        Title="Detalles del producto" Height="450" Width="800">
+        Title="Detalles del producto" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary Source="/vista/Estilos/Estilos.xaml"/>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" >
+            <Image 
+                Stretch="UniformToFill"
+                Width="180" 
+                Height="180"
+                VerticalAlignment="Top"
+                Margin="0,20,0,0">
+                <Image.Effect>
+                    <DropShadowEffect Direction="225" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                </Image.Effect>
+            </Image>
+            <Button  
+                Style="{DynamicResource ButtonOpcionesProducto}"
+                x:Name="btn_editarProducto"
+                Margin="0,20,0,0">Editar Producto</Button>
+            <Button 
+                Style="{DynamicResource ButtonOpcionesProducto}" 
+                x:Name="btn_eliminarProducto"
+                Margin="0,10,0,0">Eliminar Producto</Button>
+        </StackPanel>
+        <Border 
+            BorderThickness="3,0,3,3"
+            Margin="20"
+            CornerRadius="20"
+            BorderBrush="LightGray"
+            Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock
+                        x:Name="txt_nombreProducto"
+                        Text="Nombre"
+                        Margin="20,20,20,0"
+                        Height="40"
+                        FontSize="24" 
+                        FontFamily="Segoe UI Semibold" 
+                        Foreground="#FF281B80"
+                        />
+                <TextBlock
+                        x:Name="txt_autorProducto"
+                        Text="Autor"
+                        Margin="20,5,20,10"
+                        Height="40"
+                        FontSize="20" 
+                        FontFamily="Segoe UI Semibold" 
+                        Foreground="#FF281B80"
+                        />
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Width="250">
+                        <TextBlock
+                        x:Name="txt_precioProducto"
+                        Text="Precio"
+                        Margin="20,0,0,0"
+                        FontSize="18"
+                        FontFamily="Segoe UI Semibold"
+                        Foreground="Crimson"
+                        />
+                        <TextBlock
+                            x:Name="txt_proveedorProducto"
+                            Text="Proveedor"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Semibold"
+                            />
+                        <TextBlock
+                            x:Name="txt_generoProducto"
+                            Text="Genero"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Semibold"
+                            />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="250">
+
+                        <TextBlock
+                            x:Name="txt_stockProducto"
+                            Text="Stock"
+                            Margin="20,0,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Light"
+                            Foreground="#FF7D45D2"
+                            />
+                        <TextBlock
+                            x:Name="txt_fechaProducto"
+                            Text="Fecha"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Light" 
+                            Foreground="#FF7D45D2"
+                            />
+                        <TextBlock
+                            x:Name="txt_formatoProducto"
+                            Text="Formato"
+                            Margin="20,5,0,0"
+                            FontSize="18"
+                            FontFamily="Segoe UI Light"
+                            Foreground="#FF7D45D2"
+                            />
+                    </StackPanel>
+                </StackPanel>
+                <Separator Width="400" Margin="0,30,0,30" Visibility="Visible" Background="LightGray" Height="1"/>
+                <TextBlock
+                    x:Name="txt_descProducto"
+                    Text="Descripcion"
+                    Margin="20,5,20,0"
+                    Height="100"
+                    FontSize="18"
+                    FontFamily="Segoe UI Light"
+                    Foreground="#FF7D45D2"
+                    />
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Window>

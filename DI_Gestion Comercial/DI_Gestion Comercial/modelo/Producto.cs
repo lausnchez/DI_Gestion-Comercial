@@ -11,7 +11,7 @@ using System.Windows.Controls;
 
 namespace DI_Gestion_Comercial.modelo
 {
-    internal class Producto
+    public class Producto
     {
         public int Cod_Pro {  get; set; }
         public string Nombre {  get; set; }

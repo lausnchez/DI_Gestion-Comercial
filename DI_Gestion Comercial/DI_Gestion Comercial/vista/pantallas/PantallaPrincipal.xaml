@@ -729,7 +729,7 @@
                 d:ItemsSource="{d:SampleData ItemCount=5}" 
                 Width="1100" Height="780" 
                 Margin="0,65,51,46" 
-                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ItemDoubleClick">
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ProductoDoubleClick">
                 <ListBox.Resources>
                     <Style TargetType="ListBoxItem">
                         <EventSetter Event="MouseDoubleClick" Handler="ItemDoubleClick"/>
@@ -756,49 +756,50 @@
 
 
                                 <Image Grid.Column="0"
-                       Source="{Binding Foto}" 
-                       Stretch="UniformToFill"
-                       Width="180" 
-                       Height="180"
-                       Margin="10">
+                                    Source="{Binding Foto}" 
+                                    Stretch="UniformToFill"
+                                    Width="180" 
+                                    Height="180"
+                                    Margin="10">
                                     <Image.Effect>
                                         <DropShadowEffect Direction="225" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
                                     </Image.Effect>
                                 </Image>
                                 <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                                    <TextBlock Visibility="Collapsed" Text="{Binding Cod_Pro}"/>
                                     <TextBlock
-                            x:Name="txt_nombreProducto"
-                            Grid.Column="1"
-                            Text="{Binding Nombre}"
-                            Margin="20"
-                            Height="40"
-                            FontSize="24" 
-                            FontFamily="Segoe UI Semibold" 
-                            Foreground="#FF281B80"
-                            />
+                                        x:Name="txt_nombreProducto"
+                                        Grid.Column="1"
+                                        Text="{Binding Nombre}"
+                                        Margin="20"
+                                        Height="40"
+                                        FontSize="24" 
+                                        FontFamily="Segoe UI Semibold" 
+                                        Foreground="#FF281B80"
+                                        />
                                     <TextBlock
-                            x:Name="txt_autorProducto"
-                            Text="{Binding Nombre_Autor}"
-                            Margin="20,0,0,0"
-                            FontSize="18"
-                            FontFamily="Segoe UI Semibold"
-                            />
+                                        x:Name="txt_autorProducto"
+                                        Text="{Binding Nombre_Autor}"
+                                        Margin="20,0,0,0"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Semibold"
+                                        />
                                     <TextBlock
-                            x:Name="txt_fechaProducto"
-                            Text="{Binding Fecha, StringFormat=d}"
-                            Margin="20,5,0,0"
-                            FontSize="18"
-                            FontFamily="Segoe UI Light" 
-                            Foreground="#FF7D45D2"
-                            />
+                                        x:Name="txt_fechaProducto"
+                                        Text="{Binding Fecha, StringFormat=d}"
+                                        Margin="20,5,0,0"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light" 
+                                        Foreground="#FF7D45D2"
+                                        />
                                     <TextBlock
-                            x:Name="txt_formatoProducto"
-                            Text="{Binding Formato}"
-                            Margin="20,5,0,0"
-                            FontSize="18"
-                            FontFamily="Segoe UI Light"
-                            Foreground="#FF7D45D2"
-                            />
+                                        x:Name="txt_formatoProducto"
+                                        Text="{Binding Formato}"
+                                        Margin="20,5,0,0"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light"
+                                        Foreground="#FF7D45D2"
+                                        />
                                     <StackPanel Orientation="Horizontal">
                                         <Button Style="{DynamicResource BotonCompra}" HorizontalAlignment="Left" Margin="20">
                                             <Button.Content>

@@ -12,6 +12,8 @@ namespace DI_Gestion_Comercial.controlador
 {
     internal class ControladorPantallaPrincipal
     {
+        public Producto Producto { get; set; }
+
         public static void volcarProductosEnListBox(PantallaPrincipal pantalla)
         {
             ListBox listBox = pantalla.listadoProductos_principal;
@@ -128,7 +130,7 @@ namespace DI_Gestion_Comercial.controlador
 
         public static void mostrarVentanaDetalleProducto(Producto prod)
         {
-
+            PantallaDetalleProducto pantalla = new PantallaDetalleProducto(prod);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DI_Gestion_Comercial.controlador;
+using DI_Gestion_Comercial.modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,6 @@ namespace DI_Gestion_Comercial.vista.pantallas
     /// </summary>
     public partial class PantallaAgregarAutor : Window
     {
-        public PantallaAgregarAutor()
-        {
-            InitializeComponent();
-        }
+        
     }
 }

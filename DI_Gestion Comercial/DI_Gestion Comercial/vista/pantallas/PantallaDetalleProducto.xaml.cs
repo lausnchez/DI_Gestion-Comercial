@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DI_Gestion_Comercial.controlador;
+using DI_Gestion_Comercial.modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +17,20 @@ using System.Windows.Shapes;
 namespace DI_Gestion_Comercial.vista.pantallas
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Lógica de interacción para PantallaDetalleProducto.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class PantallaDetalleProducto : Window
     {
-        public Window1()
+        public PantallaDetalleProducto()
         {
             InitializeComponent();
+        }
+        
+        public PantallaDetalleProducto(Producto prod)
+        {
+            InitializeComponent();
+            ControladorPantallaDetalleProducto c = new ControladorPantallaDetalleProducto();
+            c.volcarTextos(prod);
         }
     }
 }

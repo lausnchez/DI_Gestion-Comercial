@@ -118,6 +118,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controlador\ControladorAgregarProductos.cs" />
+    <Compile Include="controlador\ControladorPantallaDetalleProducto.cs" />
     <Compile Include="controlador\ControladorPantallaEstadisticas.cs" />
     <Compile Include="controlador\ControladorPantallaPrincipal.cs" />
     <Compile Include="controlador\Utils.cs" />
@@ -130,6 +131,9 @@
     <Compile Include="vista\pantallas\PantallaAgregarAutor.xaml.cs">
       <DependentUpon>PantallaAgregarAutor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vista\pantallas\PantallaDetalleProducto.xaml.cs">
+      <DependentUpon>PantallaDetalleProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\pantallas\PantallaEstadisticas.xaml.cs">
       <DependentUpon>PantallaEstadisticas.xaml</DependentUpon>
     </Compile>
@@ -138,9 +142,6 @@
     </Compile>
     <Compile Include="vista\pantallas\PantallaPrincipal.xaml.cs">
       <DependentUpon>PantallaPrincipal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="vista\pantallas\PantallaDetalleProducto.xaml.cs">
-      <DependentUpon>PantallaDetalleProducto.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -177,7 +178,15 @@
     <Resource Include="vista\imagenes\vinyl_background.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="vista\Estilos\Estilos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\pantallas\PantallaAgregarAutor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\pantallas\PantallaDetalleProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,10 +199,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vista\pantallas\PantallaPrincipal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="vista\pantallas\PantallaDetalleProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
