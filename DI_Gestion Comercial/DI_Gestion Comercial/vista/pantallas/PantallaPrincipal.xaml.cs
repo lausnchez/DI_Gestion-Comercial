@@ -24,14 +24,14 @@ namespace DI_Gestion_Comercial.vista.pantallas
         public PantallaPrincipal()
         {
             InitializeComponent();
-            ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
+            ControladorPantallaPrincipal.volcarProductosEnListBox(this);
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             PantallaNuevoProducto nuevoProducto = new PantallaNuevoProducto();
             nuevoProducto.ShowDialog();
-            ControladorPantallaPrincipal.volcarProductosEnListBox(listadoProductos_principal);
+            ControladorPantallaPrincipal.volcarProductosEnListBox(this);
         }
 
         private void btn_principalEstadísticas_Click(object sender, RoutedEventArgs e)
@@ -40,6 +40,39 @@ namespace DI_Gestion_Comercial.vista.pantallas
             pantallaEstadisticas.ShowDialog();
         }
         private void ItemDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+
+        // Cambiar listados
+        private void btn_filtrarProductos_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorPantallaPrincipal.volcarProductosEnListBox(this);
+            
+        }
+
+        private void btn_filtrarClientes_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorPantallaPrincipal.volcarClientesEnListBox(this);
+        }
+
+        private void btn_filtrarProveedores_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorPantallaPrincipal.volcarProveedoresEnListBox(this);
+        }
+
+        private void btn_filtrarAutores_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorPantallaPrincipal.volcarAutoresEnListBox(this);
+        }
+
+        private void btn_filtrarGeneros_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorPantallaPrincipal.volcarGenerosEnListBox(this);
+        }
+
+        private void ProductoDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ControladorPantallaPrincipal.mostrarVentanaDetalleProducto();
         }

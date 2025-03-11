@@ -122,6 +122,7 @@
     <Compile Include="controlador\ControladorPantallaPrincipal.cs" />
     <Compile Include="controlador\Utils.cs" />
     <Compile Include="modelo\Autor.cs" />
+    <Compile Include="modelo\Cliente.cs" />
     <Compile Include="modelo\Database.cs" />
     <Compile Include="modelo\Genero.cs" />
     <Compile Include="modelo\Producto.cs" />

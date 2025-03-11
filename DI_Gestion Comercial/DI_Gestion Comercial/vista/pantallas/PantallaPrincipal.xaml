@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DI_Gestion_Comercial.vista.pantallas"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Command="http://www.galasoft.ch/mvvmlight"
+
         mc:Ignorable="d"
         Title="PantallaPrincipal" Height="1050" Width="1500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -241,8 +244,8 @@
                                 <Setter Property="Foreground" Value="White"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background3}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border3}"/>
+                                <Setter Property="Background" TargetName="border" Value="#D97444D1"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background3}"/>
@@ -717,9 +720,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <!-- Listado -->
+            <!-- Listado de productos-->
             <ListBox Style="{DynamicResource StyleListadoProductos}" 
                 x:Name="listadoProductos_principal"
+                Visibility="Hidden"
                 Panel.ZIndex="10"
                 Grid.Column="1"
                 d:ItemsSource="{d:SampleData ItemCount=5}" 
@@ -860,6 +864,308 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
+            <!--LISTADO DE CLIENTES-->
+            <ListBox Style="{DynamicResource StyleListadoProductos}" 
+                x:Name="listadoClientes_principal"
+                Panel.ZIndex="10"
+                Grid.Column="1"
+                Visibility="Hidden"
+                d:ItemsSource="{d:SampleData ItemCount=5}" 
+                Width="1100" Height="780" 
+                Margin="0,65,51,46" 
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ItemDoubleClick">
+                <ListBox.Resources>
+                    <Style TargetType="ListBoxItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ItemDoubleClick"/>
+                    </Style>
+                </ListBox.Resources>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="800"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Grid.Column="0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                            <TextBlock
+                                                x:Name="txt_nombreCliente"
+                                                Text="{Binding Nombre}"
+                                                Margin="0,20,0,20"
+                                                Height="40"
+                                                FontSize="24" 
+                                                FontFamily="Segoe UI Semibold" 
+                                                Foreground="#FF281B80"
+                                                HorizontalAlignment="Right"
+                                                />
+                                            <TextBlock
+                                                x:Name="txt_apellidoCliente"
+                                                Text="{Binding Apellidos}"
+                                                Margin="10,20,20,20"
+                                                Height="40"
+                                                FontSize="24" 
+                                                FontFamily="Segoe UI Semibold" 
+                                                Foreground="#FF281B80"
+                                                HorizontalAlignment="Right"
+                                                />
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <TextBlock
+                                        x:Name="txt_telefonoCliente"
+                                        Text="{Binding Telefono}"
+                                        FontSize="18"
+                                        Margin="0,0,20,0"
+                                        FontFamily="Segoe UI Light"
+                                        HorizontalAlignment="Right"
+                                        />      
+                                    <TextBlock
+                                        x:Name="txt_formatoProducto"
+                                        Text="{Binding Direccion}"
+                                        Margin="0,10,20,0"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light"
+                                        Foreground="#FF7D45D2"
+                                        HorizontalAlignment="Right"
+                                        />
+                                    <TextBlock
+                                        x:Name="txt_fechaAltaCliente"
+                                        Text="{Binding Fecha_Alta, StringFormat=d}"
+                                        Margin="0,10,20,20"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light" 
+                                        Foreground="Black"
+                                        HorizontalAlignment="Right"
+                                        />
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                                    <Button  Style="{DynamicResource ButtonOpcionesProducto}"
+                                        x:Name="btn_editarCliente">Editar Cliente</Button>
+                                    <Button Style="{DynamicResource ButtonOpcionesProducto}" 
+                                        x:Name="btn_eliminarCliente">Eliminar Cliente</Button>
+                                </StackPanel>
+                                
+                            </Grid>
+                            <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <!--LISTADO DE AUTORES-->
+            <ListBox Style="{DynamicResource StyleListadoProductos}" 
+                x:Name="listadoAutores_principal"
+                Panel.ZIndex="10"
+                Grid.Column="1"
+                Visibility="Hidden"
+                d:ItemsSource="{d:SampleData ItemCount=5}" 
+                Width="1100" Height="780" 
+                Margin="0,65,51,46" 
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ItemDoubleClick">
+                <ListBox.Resources>
+                    <Style TargetType="ListBoxItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ItemDoubleClick"/>
+                    </Style>
+                </ListBox.Resources>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Right">
+                                <TextBlock
+                                    x:Name="txt_contadorProductosAutor"
+                                    Text="{Binding numProductos}"
+                                    Margin="0,30,20,20"
+                                    Height="40"
+                                    FontSize="18" 
+                                    FontFamily="Segoe UI Semibold" 
+                                    Foreground="Crimson"
+                                    HorizontalAlignment="Left"
+                                    />
+                                <TextBlock
+                                    Text=" productos totales"
+                                    Margin="0,30,20,20"
+                                    Height="40"
+                                    FontSize="18" 
+                                    FontFamily="Segoe UI Light" 
+                                    Foreground="Crimson"
+                                    HorizontalAlignment="Left"
+                                    />
+                                </StackPanel>
+                                <TextBlock Grid.Column="1"
+                                    x:Name="txt_nombreAutor"
+                                    Text="{Binding Nombre}"
+                                    Margin="0,20,10,20"
+                                    Height="40"
+                                    FontSize="24" 
+                                    FontFamily="Segoe UI Semibold" 
+                                    Foreground="#FF281B80"
+                                    HorizontalAlignment="Right"
+                                    />
+                            </Grid>
+                            <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <!--LISTADO DE GÉNEROS-->
+            <ListBox Style="{DynamicResource StyleListadoProductos}" 
+                x:Name="listadoGeneros_principal"
+                Panel.ZIndex="10"
+                Grid.Column="1"
+                Visibility="Hidden"
+                d:ItemsSource="{d:SampleData ItemCount=5}" 
+                Width="1100" Height="780" 
+                Margin="0,65,51,46" 
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ItemDoubleClick">
+                <ListBox.Resources>
+                    <Style TargetType="ListBoxItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ItemDoubleClick"/>
+                    </Style>
+                </ListBox.Resources>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                
+                                <TextBlock
+                                        x:Name="txt_nombreCliente"
+                                        Text="{Binding Nombre}"
+                                        Margin="0,20,20,20"
+                                        Height="40"
+                                        FontSize="24" 
+                                        FontFamily="Segoe UI Semibold" 
+                                        Foreground="#FF281B80"
+                                        HorizontalAlignment="Right"
+                                        />
+                            </Grid>
+                            <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <!--LISTADO DE PROVEEDORES-->
+            <ListBox Style="{DynamicResource StyleListadoProductos}" 
+                x:Name="listadoProveedores_principal"
+                Panel.ZIndex="10"
+                Grid.Column="1"
+                Visibility="Hidden"
+                d:ItemsSource="{d:SampleData ItemCount=5}" 
+                Width="1100" Height="780" 
+                Margin="0,65,51,46" 
+                BorderThickness="0" Grid.RowSpan="2" Background="Transparent" MouseDoubleClick="ProductoDoubleClick">
+                <ListBox.Resources>
+                    <Style TargetType="ListBoxItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ItemDoubleClick"/>
+                    </Style>
+                </ListBox.Resources>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="800"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Grid.Column="0">
+                                    <TextBlock
+                                        x:Name="txt_nombreCliente"
+                                        Text="{Binding Nombre}"
+                                        Margin="0,20,20,10"
+                                        Height="40"
+                                        FontSize="24" 
+                                        FontFamily="Segoe UI Semibold" 
+                                        Foreground="#FF281B80"
+                                        HorizontalAlignment="Right"
+                                        />
+                                    <TextBlock
+                                        x:Name="txt_telefonoCliente"
+                                        Text="{Binding Telefono}"
+                                        FontSize="18"
+                                        Margin="0,0,20,0"
+                                        FontFamily="Segoe UI Light"
+                                        HorizontalAlignment="Right"
+                                        />
+                                    <TextBlock
+                                        x:Name="txt_formatoProducto"
+                                        Text="{Binding Direccion}"
+                                        Margin="0,10,20,0"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light"
+                                        Foreground="#FF7D45D2"
+                                        HorizontalAlignment="Right"
+                                        />
+                                    <TextBlock
+                                        x:Name="txt_fechaAltaCliente"
+                                        Text="{Binding Contacto}"
+                                        Margin="0,10,20,20"
+                                        FontSize="18"
+                                        FontFamily="Segoe UI Light" 
+                                        Foreground="Black"
+                                        HorizontalAlignment="Right"
+                                        />
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                                    <Button  Style="{DynamicResource ButtonOpcionesProducto}"
+                                         x:Name="btn_editarProveedor">Editar Proveedor</Button>
+                                    <Button Style="{DynamicResource ButtonOpcionesProducto}" 
+                                        x:Name="btn_eliminarProveedor">Eliminar Proveedor</Button>
+                                </StackPanel>
+
+                            </Grid>
+                            <Separator Grid.Row="1" Height="1" Background="#FFEDEDED"></Separator>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
             <!--- Botón de carrito de la compra -->
             <StackPanel 
                 Orientation="Horizontal" 
@@ -921,47 +1227,52 @@
                 CornerRadius="25" VerticalAlignment="Top"
                 Margin="25,0,25,25">
             <StackPanel 
-                    Grid.Column="0"  
-                    Height="310" Width="200"
-                    HorizontalAlignment="Center"
+                Grid.Column="0"  
+                Height="310" Width="200"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Vertical">
+                <TextBlock
+                    Text="Filtrar por:"
+                    FontSize="24" 
+                    FontFamily="Segoe UI Semibold" 
+                    Foreground="#FF281B80"
+                    Margin="7,7,7,15"/>
+                <Button 
+                    x:Name="btn_filtrarProductos"
+                    Style="{DynamicResource btn_selectorLista}" 
+                    Content="Productos" 
+                    HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
-                    Orientation="Vertical">
-                    <TextBlock
-                        Text="Filtrar por:"
-                        FontSize="24" 
-                        FontFamily="Segoe UI Semibold" 
-                        Foreground="#FF281B80"
-                        Margin="7,7,7,15"/>
-                    <Button 
-                     Style="{DynamicResource btn_selectorLista}" 
-                     Content="Productos" 
-                     HorizontalAlignment="Left" 
-                     VerticalAlignment="Top"
-                     Grid.Row="1"/>
+                    Grid.Row="1" Click="btn_filtrarProductos_Click"/>
                 <Button 
-                     Style="{DynamicResource btn_selectorLista}" 
-                     Content="Clientes" 
-                     HorizontalAlignment="Left" 
-                     VerticalAlignment="Top"
-                     Grid.Row="1"/>
+                    x:Name="btn_filtrarClientes"
+                    Style="{DynamicResource btn_selectorLista}" 
+                    Content="Clientes" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top"
+                    Grid.Row="1" Click="btn_filtrarClientes_Click"/>
                 <Button 
+                    x:Name="btn_filtrarProveedores"
                     Style="{DynamicResource btn_selectorLista}" 
                     Content="Proveedores" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top" 
-                    Grid.Row="1"/>
+                    Grid.Row="1" Click="btn_filtrarProveedores_Click"/>
                 <Button 
+                     x:Name="btn_filtrarAutores"
                      Style="{DynamicResource btn_selectorLista}" 
                      Content="Autores" 
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
-                     Grid.Row="1"/>
+                     Grid.Row="1" Click="btn_filtrarAutores_Click"/>
                 <Button 
+                     x:Name="btn_filtrarGeneros"
                      Style="{DynamicResource btn_selectorLista}" 
                      Content="Géneros" 
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
-                     Grid.Row="1"/>
+                     Grid.Row="1" Click="btn_filtrarGeneros_Click"/>
             </StackPanel>
             </Border>
 
